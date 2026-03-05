@@ -3,7 +3,7 @@ export const SITE = {
     title: "Simple Portfolio",
     description: "A simple resume but beautiful portfolio",
     tags: ["portfolio", "Resume cv", "Anastasia Rusakovich","PhD student"],
-    ogImage: "/og-image.webp",
+    ogImage: "/og-image.jpg",
     logo: "logo",
     logoText: "Ana",
     lang: "en",
