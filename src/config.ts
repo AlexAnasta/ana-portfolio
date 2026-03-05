@@ -1,16 +1,31 @@
 export const SITE = {
     website: "https://anastasia-rusakovich.netlify.app/",
-    title: "Simple Portfolio",
-    description: "A simple resume but beautiful portfolio",
-    tags: ["portfolio", "Resume cv", "Anastasia Rusakovich","PhD student"],
+    title: "Anastasia Rusakovich | PhD Student in Bioinformatics and Cancer Research",
+    description: "Anastasia Rusakovich resume, PhD student in bioinformatics and molecular biology at IGDR Rennes. Long-read transcriptomics, circRNA, melanoma research, reproducible workflows, and scientific publications.",
+    tags: [
+        "Anastasia Rusakovich",
+        "Anastasia",
+        "Rusakovich",
+        "bioinformatics",
+        "molecular biology",
+        "cancer research",
+        "long-read transcriptomics",
+        "circRNA",
+        "melanoma",
+        "NGS data analysis",
+        "PhD student",
+        "IGDR Rennes",
+        "Rennes France",
+        "scientific"
+    ],
     ogImage: "/og-image.jpg",
     logo: "logo",
     logoText: "Ana",
     lang: "en",
     favicon: "/favicon.png",
-    repository: "https://github.com/vito8916/simple-portfolio.git",
+    repository: "https://github.com/AlexAnasta/ana-portfolio",
     author: "Anastasia Rusakovich",
-    profile: "https://victoralvarado.dev/",
+    profile: "https://anastasia-rusakovich.netlify.app/",
 }
 
 export const ME = {
