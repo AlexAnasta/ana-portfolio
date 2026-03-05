@@ -1,24 +1,23 @@
 
 ---
-import { getCollection, render } from "astro:content";
 import { Image } from "astro:assets";
-import Layout from "../../layouts/Layout.astro";
+import { getCollection, render } from "astro:content";
 import BackBtn from "@/components/BackBtn.astro";
 import BackToTop from "../../components/BackToTop.astro";
+import Layout from "../../layouts/Layout.astro";
 
 export async function getStaticPaths() {
-    const posts = await getCollection('projects');
-    return posts.map(post => ({
-        params: { id: post.id },
-        props: { post },
-    }));
+	const posts = await getCollection("projects");
+	return posts.map((post) => ({
+		params: { id: post.id },
+		props: { post },
+	}));
 }
 
 const { post } = Astro.props;
 const { title, summary, tags, cover, ogImage, url } = post.data;
 
 const { Content } = await render(post);
-
 ---
 <Layout title={title} description={summary} imageOg={ogImage} scrollSmooth={true}>
     <>

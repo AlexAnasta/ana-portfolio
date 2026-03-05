@@ -5,10 +5,8 @@ portfolio site.
 
 This project leverages **Astro v5**, incorporating the latest features that Astro has to offer.
 <p  style="text-align: center;">
-  <img style="display: block; margin: 0 auto;" alt="Simple Portfolio Cover preview" src="https://firebasestorage.googleapis.com/v0/b/biography-fa3a3.appspot.com/o/Cover2.webp?alt=media&token=1cd30f91-5738-4d51-bd51-c52fb76152ba"/>
+  <img style="display: block; margin: 0 auto;" alt="Resume Cover preview" src="https://raw.githubusercontent.com/AlexAnasta/ana-portfolio/refs/heads/main/public/og-image.jpg"/>
 </p>
-
-<a href="https://astro.build"><img src="https://astro.badg.es/v2/built-with-astro/tiny.svg" alt="Built with Astro" width="120" height="20"></a>
 
 ## 🔥 Live
 
@@ -36,8 +34,7 @@ design: [Simple Resume Portfolio](https://www.figma.com/community/file/121301068
 - [Project Structure](#project-structure)
 - [Customization](#customization-and--styling)
 - [Deployment](#deployment)
-- [Changelog](#changelog)
-- [Contributing](#contributing)
+- [Good practices](#good-practices)
 - [License](#license)
 
 ## Getting Started
@@ -264,6 +261,16 @@ Or follow the steps below:
 4. **GitHub Pages Deployment:**
 
    You can also deploy to GitHub Pages by pushing the `dist` folder to the `gh-pages` branch of your repository.
+
+## Good Practices
+
+Biome allow to check lint, format
+
+```sh
+npm run lint
+npm run format
+npm run check:fix
+```
 
 ## License
 

@@ -1,16 +1,14 @@
 ---
 // astro imports
-import { Image } from 'astro:assets';
-
+import { Image } from "astro:assets";
 // library imports
-import {cn} from "../lib/utils";
-
+import { cn } from "../lib/utils";
 
 interface Props {
-    title: string;
-    tags: string[];
-    cover: ImageMetadata;
-    id: string;
+	title: string;
+	tags: string[];
+	cover: ImageMetadata;
+	id: string;
 }
 
 const { title, tags, cover, id } = Astro.props as Props;

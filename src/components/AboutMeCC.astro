@@ -1,19 +1,16 @@
 ---
+// config import
+import { ME } from "@/config";
+import education from "@/data/education.ts";
+import hardSkills from "@/data/hardSkills";
 // data imports
-import workExperience from "@/data/Jobs.ts"
-import education from "@/data/education.ts"
-import languages from "../data/languages.ts"
-import hardSkills from "@/data/hardSkills"
-import softSkills from "@/data/softSkills"
-
+import workExperience from "@/data/Jobs.ts";
+import softSkills from "@/data/softSkills";
+import languages from "../data/languages.ts";
+import EduDetail from "./EduDetail.astro";
 // component imports
 import JobDetails from "./JobDetails.astro";
-import EduDetail from "./EduDetail.astro";
 import SkillCard from "./SkillCard.astro";
-
-// config import
-import {ME} from '@/config';
-
 ---
 
 <div class="relative flex flex-col gap-8 text-n700 dark:text-n200 w-full mt-10 px-4">

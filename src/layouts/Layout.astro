@@ -1,31 +1,30 @@
 ---
-import {ClientRouter} from 'astro:transitions';
-import {cn} from "../lib/utils";
-import '@/styles/globals.css'
+import { ClientRouter } from "astro:transitions";
+import { cn } from "../lib/utils";
+import "@/styles/globals.css";
 
-import Navbar from "../components/Navbar.astro";
+import { SITE } from "@/config";
 import Footer from "../components/Footer.astro";
-
-import {SITE} from '@/config';
+import Navbar from "../components/Navbar.astro";
 
 interface Props {
-    title?: string;
-    scrollSmooth: boolean;
-    description?: string;
-    tags?: string[];
-    author?: string;
-    imageOg?: string;
-    canonicalURL?: string;
+	title?: string;
+	scrollSmooth: boolean;
+	description?: string;
+	tags?: string[];
+	author?: string;
+	imageOg?: string;
+	canonicalURL?: string;
 }
 
 const {
-    title = SITE.title,
-    description = SITE.description,
-    tags = SITE.tags,
-    author = SITE.author,
-    scrollSmooth,
-    canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
-    imageOg = SITE.ogImage,
+	title = SITE.title,
+	description = SITE.description,
+	tags = SITE.tags,
+	author = SITE.author,
+	scrollSmooth,
+	canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
+	imageOg = SITE.ogImage,
 } = Astro.props;
 ---
 

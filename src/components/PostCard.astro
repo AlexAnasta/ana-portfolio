@@ -1,30 +1,31 @@
 ---
-import {Image} from "astro:assets";
+import { Image } from "astro:assets";
 import ClockIcon from "@/icons/time-line.svg";
 
 interface Props {
-    id: string;
-    title: string;
-    description: string;
-    publishDate: Date;
-    tags: string[];
-    cover: {
-        src: ImageMetadata;
-        alt?: string;
-    };
+	id: string;
+	title: string;
+	description: string;
+	publishDate: Date;
+	tags: string[];
+	cover: {
+		src: ImageMetadata;
+		alt?: string;
+	};
 }
 
-const {id, title, description, publishDate, tags, cover} = Astro.props as Props;
+const { id, title, description, publishDate, tags, cover } =
+	Astro.props as Props;
 
 const post = {
-    id,
-    data: {
-        title,
-        description,
-        publishDate,
-        tags,
-        cover,
-    },
+	id,
+	data: {
+		title,
+		description,
+		publishDate,
+		tags,
+		cover,
+	},
 };
 ---
 

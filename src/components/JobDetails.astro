@@ -1,31 +1,22 @@
 ---
-// component imports
-import {Badge} from "./ui/badge";
-
 // library imports
-import {formatDatetime} from "../lib/utils";
+import { formatDatetime } from "../lib/utils";
+// component imports
+import { Badge } from "./ui/badge";
 
 interface Job {
-    title: string;
-    company: string;
-    location: string;
-    startDate: string;
-    endDate: string;
-    goals: string[];
-    currentJob: boolean;
+	title: string;
+	company: string;
+	location: string;
+	startDate: string;
+	endDate: string;
+	goals: string[];
+	currentJob: boolean;
 }
 
-const {jobData} = Astro.props;  // Ensure correct typing for the props
-const {
-    title,
-    company,
-    location,
-    startDate,
-    endDate,
-    goals,
-    currentJob,
-} = jobData as Job;
-
+const { jobData } = Astro.props; // Ensure correct typing for the props
+const { title, company, location, startDate, endDate, goals, currentJob } =
+	jobData as Job;
 ---
 
 <div class="flex flex-col gap-2">

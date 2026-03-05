@@ -1,21 +1,22 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import {getCollection} from 'astro:content';
-import ProjectCardList from '@/components/ProjectCardList.astro';
+import { getCollection } from "astro:content";
+import ProjectCardList from "@/components/ProjectCardList.astro";
+import Layout from "../../layouts/Layout.astro";
 
 interface Project {
-    id: string;
-    data: {
-        title: string;
-        summary: string;
-        tags: string[];
-        cover: ImageMetadata;
-        startDate: Date;
-    };
+	id: string;
+	data: {
+		title: string;
+		summary: string;
+		tags: string[];
+		cover: ImageMetadata;
+		startDate: Date;
+	};
 }
 
-const allProjects = (await getCollection('projects'))
-    .sort((a, b) => b.data.startDate.getTime() - a.data.startDate.getTime());
+const allProjects = (await getCollection("projects")).sort(
+	(a, b) => b.data.startDate.getTime() - a.data.startDate.getTime(),
+);
 ---
 
 <Layout title="Anastasia Rusakovich | Portfolio | My Projects" description="A list of my best projects" scrollSmooth={false}>
