@@ -123,27 +123,6 @@ table explaining the properties of each object:
 | author      | string | The author of the site.                                |
 | profile     | string | The url of the online profile of the author.           |
 
-#### Example:
-
-```typescript
-export const SITE = {
-    website: "https://vicbox.dev/projects/simple-portfolio", // replace this with your deployed domain
-    title: "Simple Portfolio",
-    description: "A simple but beautiful portfolio created with Astro",
-    tags: ["portfolio", "Resume cv", "Astro"],
-    ogImage: "/og-image.webp",
-    logo: "logo",
-    logoText: "SPortfolio",
-    lang: "en",
-    favicon: "/favicon.png",
-    repository: "https://github.com/vito8916/simple-portfolio.git",
-    author: "Victor Alvarado",
-    profile: "https://victoralvarado.dev/",
-}
-````
-
----
-
 #### ME
 
 table explaining the properties of each object:
@@ -156,38 +135,6 @@ table explaining the properties of each object:
 | profileFacts | object | An array of objects with the description and value of the fact.         |
 | about        | string | A brief description about you.                                          |
 | contactInfo  | object | An array of objects with the email, linkedin, and resumeDoc properties. |
-
-#### Example:
-
-```typescript
-export const ME = {
-    name: "John Doe",
-    profession: "Software Engineer | Full Stack Developer",
-    profileImage: "pp.png",
-    profileFacts: [
-        {
-            value: 10,
-            description: "Years of Experience"
-        },
-        {
-            value: 5,
-            description: "Completed Projects"
-        },
-        {
-            value: 4,
-            description: "Satisfied Clients"
-        }
-    ],
-    contactInfo: {
-        email: "vicbox.dev@vicbox.dev",
-        linkedin: "https://www.linkedin.com/in/victor-alvaradohn",
-        resumeDoc: "resume.pdf",
-    },
-    aboutMe: "I am a software engineer with a passion for web development. I have experience in building web " + "applications using modern technologies. I am a self-taught developer who enjoys learning new things and " + "sharing knowledge with others.",
-}
-````
-
----
 
 #### SOCIAL
 
@@ -205,8 +152,6 @@ If you have configured the project correctly, you should see something like this
 ![Personal Info Section](https://firebasestorage.googleapis.com/v0/b/biography-fa3a3.appspot.com/o/Screenshot%202024-11-22%20at%2018.39.59.png?alt=media&token=444bf708-da0a-4e19-8104-d5d071d73c53)
 
 And also the Meta Tags in the Head of the HTML should be working correctly.
-
----
 
 ## Add your projects, experiences, and educational information
 
@@ -226,32 +171,6 @@ directory. The file should have the following structure:
 | url        | string   | The URL of the project to show a demo or more information.                                    |
 | cover      | string   | An image to show in the project card.                                                         |
 | ogImage    | string   | An image to show when sharing the project on social media.                                    |                                    |
-
-
-#### Example frontMatter:
-
-```md
----
-title: ProAccountant Website
-summary: Professional Accounting Services Website built with Next.js, Tailwind CSS, TypeScript, and ShadCN. The site showcases accounting services, features a contact form, and offers a blog section to establish the accountant as an authority in the field.
-tags:
-    - React
-    - Next.js
-    - ContentFull
-    - Motion
-    - Tailwind
-startDate: 2024-04-07
-endDate: 2024-04-09
-author: Victor Alvarado
-url: https://google.com
-cover: './images/pro-accountant/accnt.webp'
-ogImage: './images/pro-accountant/accnt.webp'
----
-```
-If you plan to add images to the project, you should place them in the `src/content/projects/images/` directory.
-For a better organization, I recommend creating a separate folder inside `images/` for each project.
-
----
 
 ### Jobs (as array of objects file)
 
@@ -273,43 +192,6 @@ table explaining the properties of each object:
 | goals       | string[] | An array of goals or achievements during the job.                     |
 | currentJob  | boolean  | A boolean value to indicate if you are currently working in this job. |
 
-
-#### Example:
-
-```typescript
-const workExperience: WorkExperience[] = [
-    {
-        title: "Frontend Developer",
-        startDate: "2020-03-10",
-        endDate: "", // Leave empty if you are currently working here
-        company: "Google Inc",
-        location: "United States",
-        description: "Developed and maintained web applications using React, NextJs, and Tailwind CSS.",
-        goals: [
-            "Developed and maintained web applications using React, NodeJs, and MongoDB.",
-            "Worked with the team to develop and maintain web applications using React, NodeJs, and MongoDB.",
-            "Created and maintained web applications using React, NodeJs, and MongoDB.",
-        ],
-        currentJob: true,
-    },
-    // Add more jobs as needed
-];
-
-export default workExperience;
-```
-
-For better results, I highly recommend using Action Verbs to describe your achievements and responsibilities. Here are
-some examples:
-
-- "Developed and maintained web applications using React, Node.Js, and MongoDB.",
-- "Worked with the team to develop and maintain web applications using React, Node.Js, and MongoDB.",
-- "Created and maintained web applications using React, NodeJ.s, and MongoDB."
-
-Read more about Action
-Verbs [here](https://www.coursera.org/articles/resume-action-words?utm_content=pmax_promo-q4-2024-latam_65percent_courseraplus-annual&utm_medium=sem&utm_source=gg&utm_campaign=B2C_LATAM_special_coursera_FTCOF_courseraplus_pmax-promo-2024Q4-LATAM&campaignid=21877631985&adgroupid=&device=c&keyword=&matchtype=&network=x&devicemodel=&adposition=&creativeid=&hide_mobile_promo&gad_source=1&gclid=CjwKCAiA9IC6BhA3EiwAsbltOGYQZ5rp2focKXMltxHN6IAI55pqOTu_FP1kdh0A121Kfe05A_ZY5xoCRQ4QAvD_BwE).
-
----
-
 ### Education (as array of objects file)
 
 ### `/src/data/education.ts`
@@ -329,46 +211,11 @@ table explaining the properties of each object:
 | currentUni  | boolean | A boolean value to indicate if you are currently studying in this school. |
 
 
-#### Example:
-
-```typescript
-const education = [
-    {
-        title: "General English",
-        startDate: "2024-09-01",
-        endDate: "2025-06-01", // Leave empty if you are currently studying here
-        school: "UCD ELA",
-        location: "Ireland",
-        description: "Studied English as a second language.",
-        currentUni: false, // Set to true if you are currently studying here
-    },
-    // Add more education entries as needed
-];
-
-export default education;
-```
----
-
 ### Hard Skills (as array of objects file)
 
 `/src/data/hardSkills.ts`
 
 Contains a list of skills you possess.
-
-Example structure:
-
-```typescript
-const Hardskills = [
-    {
-        name: "AstroJs",
-        description: "My favorite static site generator for building modern websites",
-        icon: "astro_dark"
-    }
-    // Add more hard skills as needed
-];
-
-export default skills;
-```
 
 ---
 
@@ -377,20 +224,6 @@ export default skills;
 `/src/data/softSkills.ts`
 
 Contains a list of skills you possess.
-
-Example structure:
-
-```typescript
-const Hardskills = [
-    {
-        name: "AstroJs",
-        icon: "astro_dark"
-    }
-    // Add more hard skills as needed
-];
-
-export default skills;
-```
 
 You can add, edit, or remove entries from these files to customize the content presented on your portfolio. Each file
 typically exports an array of objects or strings that are consumed by various components in the project.
@@ -403,32 +236,6 @@ Styles can be customized in the `tailwind.config.js` file
 and add your custom styles in the `src/styles/globals.css`.
 
 To customize the colors, you can edit the theme section in the `tailwind.config.js` file.
-
-```javascript
-module.exports = {
-  theme: {
-    extend: {
-        colors: {
-            // Light mode colors
-            'light-theme': '#E9EBEC', // Background color for light mode
-            'primary-light': '#FBD144', // Primary color for light mode
-            'primary-hover-light': '#FFE071', // Primary hover color for light mode
-
-            // Dark mode colors
-            'dark-theme': '#0C151D', // Background color for dark mode
-            'primary-dark': '#FFE071', // Primary color for dark mode
-            'primary-hover-dark': '#FBD144', // Primary hover color for dark mode
-            'n200': '#d7d9da', // Text color for dark mode
-
-            // Neutrals
-            'n900': '#222222', // this is the color for the Navbar and other elements
-            'n700': '#171F26', // Text color for light mode
-            'n500': '#555555', // Text color secundary texts, borders, etc
-        },
-    },
-  },
-};
-```
 
 ---
 
@@ -457,31 +264,6 @@ Or follow the steps below:
 4. **GitHub Pages Deployment:**
 
    You can also deploy to GitHub Pages by pushing the `dist` folder to the `gh-pages` branch of your repository.
-
----
-
-## Changelog
-
-### v1.0.0
-
-- Upgraded from Astro v5 beta to v5 stable.
-- Initial release with Astro v5.
-
-### v1.1.0
-
-- Added Blog feature. Now you can add your blog posts in the `src/content/posts` directory.
-- Added a changelog section to the README file.
-- Refactored Layout component and other pages.
-- Added two example blog post that help you how to change some things in this template.
-
----
-## Contributing
-
-[GitHub Repository](https://github.com/vito8916/simple-portfolio.git)
-
-Contributions are welcome! Please submit a pull request or open an issue to discuss changes.
-
----
 
 ## License
 
