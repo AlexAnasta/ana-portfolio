@@ -1,5 +1,5 @@
 ---
-author: VicBox
+author: Anastasia Rusakovich
 publishDate: 2024-12-20T15:20:35Z
 title: Customizing color schemes of Astro Simple Portfolio
 tags:

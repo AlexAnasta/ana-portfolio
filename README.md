@@ -10,9 +10,9 @@ This project leverages **Astro v5**, incorporating the latest features that Astr
 
 <a href="https://astro.build"><img src="https://astro.badg.es/v2/built-with-astro/tiny.svg" alt="Built with Astro" width="120" height="20"></a>
 
-## 🔥 DEMO
+## 🔥 Live
 
-- [VIEW DEMO](https://simple-portfolio.vicbox.dev)
+- [Live](https://anastasia-rusakovich.netlify.app/)
 
 ### Features
 **Now upgraded to Astro v5**: the latest release of Astro.
