@@ -8,14 +8,18 @@ import TabsButtons from "../components/TabsButtons.tsx";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Anastasia Rusakovich | Portfolio" description="A simple portfolio created with Astro." scrollSmooth={false}>
-    <>
-        <ProfileInfo/>
-        <ProfileFacts/>
-        <ProfileActionButton/>
-        <TabsButtons client:idle>
-            <AboutMeCC slot="about"/>
-            <ProjectsCC slot="portfolio"/>
-        </TabsButtons>
-    </>
+<Layout
+	title="Anastasia Rusakovich | Portfolio"
+	description="A simple portfolio created with Astro."
+	scrollSmooth={false}
+>
+	<>
+		<ProfileInfo />
+		<ProfileFacts />
+		<ProfileActionButton />
+		<TabsButtons client:idle>
+			<AboutMeCC slot="about" />
+			<ProjectsCC slot="portfolio" />
+		</TabsButtons>
+	</>
 </Layout>

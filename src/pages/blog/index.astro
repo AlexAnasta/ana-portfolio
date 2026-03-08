@@ -22,31 +22,36 @@ const allPost = (await getCollection("posts")).sort(
 );
 ---
 
-<Layout title="John Doe | Portfolio | Blog" description="A list of my blog posts" scrollSmooth={false}>
-    <>
-        <!--Blog Section-->
-        <section class="border-bottom">
-            <div class="mb-4">
-                <h2 class="text-3xl font-bold mb-8">All My Blog Posts</h2>
-            </div>
-        </section>
+<Layout
+	title="John Doe | Portfolio | Blog"
+	description="A list of my blog posts"
+	scrollSmooth={false}
+>
+	<>
+		<!--Blog Section-->
+		<section class="border-bottom">
+			<div class="mb-4">
+				<h2 class="text-3xl font-bold mb-8">All My Blog Posts</h2>
+			</div>
+		</section>
 
-        <section class="flex flex-col gap-8">
-            {allPost.length > 0 ? (
-                allPost.map((post: Post) => (
-                        <PostCard
-                                id={post.id}
-                                title={post.data.title}
-                                description={post.data.description}
-                                publishDate={post.data.publishDate}
-                                tags={post.data.tags}
-                                cover={post.data.cover}
-                        />
-                ))
-            ) : (
-                    <p>No posts found.</p>
-            )
-            }
-        </section>
-    </>
+		<section class="flex flex-col gap-8">
+			{
+				allPost.length > 0 ? (
+					allPost.map((post: Post) => (
+						<PostCard
+							id={post.id}
+							title={post.data.title}
+							description={post.data.description}
+							publishDate={post.data.publishDate}
+							tags={post.data.tags}
+							cover={post.data.cover}
+						/>
+					))
+				) : (
+					<p>No posts found.</p>
+				)
+			}
+		</section>
+	</>
 </Layout>
