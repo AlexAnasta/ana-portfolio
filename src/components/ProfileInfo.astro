@@ -3,6 +3,7 @@
 import { ME } from "@/config";
 // components imports
 import ProfileImage from "./ProfileImage.astro";
+import DotWave from "./DotWave.astro";
 import Social from "./Social.astro";
 
 const { name, profession } = ME;
@@ -11,10 +12,10 @@ const { name, profession } = ME;
 <div class={"w-full flex items-center justify-center mt-5"}>
 	<div class="flex items-center gap-6 w-full">
 		<div
-			class={"border-[3px] border-primary-light dark:border-primary-dark p-1.5 rounded-full "}
-			style={{ overflow: "hidden" }}
+			class={"relative border-[3px] border-primary-light dark:border-primary-dark p-1.5 rounded-full overflow-visible"}
 		>
-			<ProfileImage />
+      <DotWave count={3} duration={4} />
+      <ProfileImage />
 		</div>
 		<div class={"profile-info flex flex-col gap-2 w-full"}>
 			<div class="info">

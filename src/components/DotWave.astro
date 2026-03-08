@@ -1,0 +1,64 @@
+---
+type DotWaveProps = {
+	count?: number;
+	duration?: number;
+	scaleStart?: number;
+	scaleEnd?: number;
+};
+
+const {
+	count = 1,
+	duration = 2,
+	scaleStart = 1,
+	scaleEnd = 1.5,
+} = Astro.props as DotWaveProps;
+
+const dots = Array.from({ length: count });
+---
+
+<div class="dot-wave-container">
+	{
+		dots.map((_, idx) => (
+			<div
+				class="dot-wave"
+				style={`--duration:${duration}s;--delay:${
+					(duration / count) * idx
+				}s;--scale-start:${scaleStart};--scale-end:${scaleEnd};`}
+			/>
+		))
+	}
+</div>
+
+<style>
+	.dot-wave-container {
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+		z-index: -1;
+	}
+
+	.dot-wave {
+		position: absolute;
+		inset: 0;
+		border-radius: 9999px;
+		animation-duration: var(--duration);
+		animation-delay: var(--delay);
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: infinite;
+		animation-name: dot-wave;
+	}
+
+	@keyframes dot-wave {
+		0% {
+			opacity: 0.6;
+			transform: scale(var(--scale-start));
+			background-color: rgba(251, 209, 68, 0.28);
+		}
+		100% {
+			opacity: 0;
+			transform: scale(var(--scale-end));
+			background-color: rgba(251, 209, 68, 0.06);
+		}
+	}
+
+</style>
