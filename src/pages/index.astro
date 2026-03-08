@@ -1,5 +1,7 @@
 ---
-import ProjectsCC from "@/components/ProjectsCC.astro";
+import Skills from "@/components/Skills.astro";
+import Contribution from "@/components/Contribution.astro";
+import Communication from "@/components/Communication.astro";
 import AboutMeCC from "../components/AboutMeCC.astro";
 import ProfileActionButton from "../components/ProfileActionButton.astro";
 import ProfileFacts from "../components/ProfileFacts.astro";
@@ -19,7 +21,9 @@ import Layout from "../layouts/Layout.astro";
 		<ProfileActionButton />
 		<TabsButtons client:idle>
 			<AboutMeCC slot="about" />
-			<ProjectsCC slot="portfolio" />
+			<Contribution slot="contribution" />
+			<Communication slot="communication" />
+			<Skills slot="skills" />
 		</TabsButtons>
 	</>
 </Layout>

@@ -1,12 +1,15 @@
-import type { ReactNode } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs.tsx";
+
+import type { ReactNode } from "react";
 
 type TabsButtonsProps = {
 	about?: ReactNode;
-	portfolio?: ReactNode;
+	contribution?: ReactNode;
+	communication?: ReactNode;
+	skills?: ReactNode;
 };
 
-const TabsButtons = ({ about, portfolio }: TabsButtonsProps) => {
+const TabsButtons = ({ about, contribution, communication, skills }: TabsButtonsProps) => {
 	return (
 		<Tabs defaultValue="about" className="w-full ">
 			<TabsList
@@ -20,17 +23,35 @@ const TabsButtons = ({ about, portfolio }: TabsButtonsProps) => {
 				>
 					About
 				</TabsTrigger>
+        <TabsTrigger
+					className={
+						"w-full py-4 rounded-lg dark:data-[state=active]:text-primary-dark data-[state=active]:bg-light-theme dark:data-[state=active]:bg-dark-theme"
+					}
+					value="contribution"
+				>
+					Contribution
+				</TabsTrigger>
 				<TabsTrigger
 					className={
 						"w-full py-4 rounded-lg dark:data-[state=active]:text-primary-dark data-[state=active]:bg-light-theme dark:data-[state=active]:bg-dark-theme"
 					}
-					value="portfolio"
+					value="communication"
 				>
-					Portfolio
+					Communication
+				</TabsTrigger>
+				<TabsTrigger
+					className={
+						"w-full py-4 rounded-lg dark:data-[state=active]:text-primary-dark data-[state=active]:bg-light-theme dark:data-[state=active]:bg-dark-theme"
+					}
+					value="skills"
+				>
+					Skills
 				</TabsTrigger>
 			</TabsList>
 			<TabsContent value="about">{about}</TabsContent>
-			<TabsContent value="portfolio">{portfolio}</TabsContent>
+			<TabsContent value="contribution">{contribution}</TabsContent>
+			<TabsContent value="communication">{communication}</TabsContent>
+			<TabsContent value="skills">{skills}</TabsContent>
 		</Tabs>
 	);
 };

@@ -1,0 +1,51 @@
+---
+// config import
+import hardSkills from "@/data/hardSkills";
+// data imports
+import softSkills from "@/data/softSkills";
+import languages from "../data/languages.ts";
+// component imports
+import SkillCard from "./SkillCard.astro";
+---
+
+<div
+	class="relative flex flex-col gap-8 text-n700 dark:text-n200 w-full mt-10 px-4"
+>
+	{/*Skills section*/}
+	<div class="mb-4">
+		<h2 class="text-3xl font-bold mb-4 text-center text-primary-dark">Hard Skills</h2>
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+			{
+				hardSkills.map((skill) => (
+					<SkillCard {...skill} showDescription={true} />
+				))
+			}
+		</div>
+	</div>
+	{/*Hobbies section*/}
+	<div class="mb-4">
+		<h2 class="text-2xl font-bold mb-4 text-center text-primary-dark">Soft Skills</h2>
+		<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+			{
+				softSkills.map((skill) => (
+					<SkillCard {...skill} showDescription={false} />
+				))
+			}
+		</div>
+	</div>
+	{/*Languages section*/}
+	<div class="mb-4">
+		<h2 class="text-2xl font-bold mb-4 text-center text-primary-dark">Languages</h2>
+		<div class="flex flex-col gap-2">
+			{
+				languages.map((lang) =>
+					lang.show ? (
+						<p>
+							{lang.name} - {lang.level}
+						</p>
+					) : null,
+				)
+			}
+		</div>
+	</div>
+</div>
