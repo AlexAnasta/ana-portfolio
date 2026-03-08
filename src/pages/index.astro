@@ -8,6 +8,13 @@ import ProfileFacts from "../components/ProfileFacts.astro";
 import ProfileInfo from "../components/ProfileInfo.astro";
 import TabsButtons from "../components/TabsButtons.tsx";
 import Layout from "../layouts/Layout.astro";
+
+const tabs = [
+	{ value: "about", label: "About" },
+	{ value: "contribution", label: "Contribution" },
+	{ value: "communication", label: "Communication" },
+	{ value: "skills", label: "Skills" },
+] as const;
 ---
 
 <Layout
@@ -19,7 +26,7 @@ import Layout from "../layouts/Layout.astro";
 		<ProfileInfo />
 		<ProfileFacts />
 		<ProfileActionButton />
-		<TabsButtons client:idle>
+		<TabsButtons client:idle tabs={tabs}>
 			<AboutMeCC slot="about" />
 			<Contribution slot="contribution" />
 			<Communication slot="communication" />
