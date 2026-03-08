@@ -8,8 +8,8 @@ export default {
 			screens: {
 				sm: "100%",
 				md: "100%",
-				lg: "520px",
-				xl: "620px",
+				lg: "600px",
+				xl: "800px",
 			},
 			padding: "2rem",
 		},
