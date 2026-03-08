@@ -10,7 +10,7 @@ interface Education {
 
 const education: Education[] = [
 	{
-		title: "PhD Student - Bioinformatics, Cancer Research, Molecular Biology",
+		title: "Bioinformatics, Cancer Research, Molecular Biology",
 		startDate: "2023-11-01",
 		school: "Institute of Genetics and Development of Rennes (IGDR)",
 		location: "Rennes, France",

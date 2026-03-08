@@ -2,7 +2,7 @@
 	"name": "astro-simple-portfolio",
 	"type": "module",
 	"version": "1.1.0",
-	"description": "Anastasia Rusakovich resume, PhD student in bioinformatics and molecular biology at IGDR Rennes. Long-read transcriptomics, circRNA, melanoma research, reproducible workflows, and scientific publications.",
+	"description": "Anastasia Rusakovich resume, bioinformatics and molecular biology at IGDR Rennes. Long-read transcriptomics, circRNA, melanoma research, reproducible workflows, and scientific publications.",
 	"license": "MIT",
 	"private": true,
 	"author": {

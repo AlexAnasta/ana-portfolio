@@ -1,9 +1,9 @@
 export const SITE = {
 	website: "https://anastasia-rusakovich.netlify.app/",
 	title:
-		"Anastasia Rusakovich | PhD Student in Bioinformatics and Cancer Research",
+		"Anastasia Rusakovich | Bioinformatics and Cancer Research",
 	description:
-		"Anastasia Rusakovich resume, PhD student in bioinformatics and molecular biology at IGDR Rennes. Long-read transcriptomics, circRNA, melanoma research, reproducible workflows, and scientific publications.",
+		"Anastasia Rusakovich resume, bioinformatics and molecular biology at IGDR Rennes. Long-read transcriptomics, circRNA, melanoma research, reproducible workflows, and scientific publications.",
 	tags: [
 		"Anastasia Rusakovich",
 		"Anastasia",
@@ -15,7 +15,6 @@ export const SITE = {
 		"circRNA",
 		"melanoma",
 		"NGS data analysis",
-		"PhD student",
 		"IGDR Rennes",
 		"Rennes France",
 		"scientific",
@@ -32,17 +31,17 @@ export const SITE = {
 
 export const ME = {
 	name: "Anastasia Rusakovich",
-	profession: "PhD student in molecular biology and bioinformatics",
+	profession: "Molecular biology and bioinformatics",
 	profileImage: "pp.jpg",
 	profileFacts: [
 		{
-			value: 10,
-			description: "Years of Experience",
+			value: 7,
+			description: "Years in Molecular Biology",
 		},
 		{
-			value: 2,
-			description: "Papers published",
-		},
+			value: 4,
+			description: "Years in Bioinformatics",
+		}
 	],
 	contactInfo: {
 		email: "anastasia.rusakovich@univ-rennes.fr",
@@ -50,7 +49,7 @@ export const ME = {
 		resumeDoc: "resume.pdf",
 	},
 	aboutMe:
-		"I am a PhD student in molecular biology and bioinformatics. I have experience in conducting research and analyzing data using modern technologies. I am passionate about learning new things and sharing knowledge with others.",
+		"I am a molecular biologist and bioinformatician. I have experience in conducting research and analyzing data using modern technologies. I am passionate about learning new things and sharing knowledge with others.",
 };
 
 export const SOCIALS = [
