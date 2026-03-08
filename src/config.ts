@@ -55,12 +55,6 @@ export const ME = {
 
 export const SOCIALS = [
 	{
-		name: "Instagram",
-		url: "https://www.instagram.com/anestetize_me/",
-		icon: "instagram-fill",
-		show: true,
-	},
-	{
 		name: "GitHub",
 		url: "https://github.com/aerusakovich",
 		icon: "github-fill",
