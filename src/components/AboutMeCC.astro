@@ -14,9 +14,7 @@ import JobDetails from "./JobDetails.astro";
 >
 	{/*Description or About me -- Section*/}
 	<div class="mb-4">
-		<p>
-			{ME.aboutMe}
-		</p>
+	<p set:html={ME.aboutMe} />
 	</div>
 	{/*Work experience section*/}
 	<div class="mb-4">
@@ -29,7 +27,14 @@ import JobDetails from "./JobDetails.astro";
 	<div class="mb-4">
 		<h2 class="text-3xl font-bold mb-4 text-center text-primary-dark">Education</h2>
 		<div class="flex flex-col gap-6">
-			{education.map((edu) => <EduDetail eduData={edu} />)}
+			{education.filter((edu) => edu.type === "degree").map((edu) => <EduDetail eduData={edu} />)}
+		</div>
+	</div>
+	{/*Training section*/}
+	<div class="mb-4">
+		<h2 class="text-3xl font-bold mb-4 text-center text-primary-dark">Training</h2>
+		<div class="flex flex-col gap-6">
+			{education.filter((edu) => edu.type === "training").map((edu) => <EduDetail eduData={edu} />)}
 		</div>
 	</div>
 </div>

@@ -14,14 +14,14 @@ const languages: Language[] = [
 	},
 	{
 		name: "English",
-		level: "Native",
-		description: "I speak, read, and write.",
+		level: "C1",
+		description: "I speak, read, and write fluently.",
 		show: true,
 	},
 	{
 		name: "French",
 		level: "B1",
-		description: "I speak fluently and write fluently",
+		description: "I can understand others and express myself in everyday situations, but I am not yet fluent.",
 		show: true,
 	},
 ];

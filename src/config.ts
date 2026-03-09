@@ -37,10 +37,12 @@ export const ME = {
 		{
 			value: 7,
 			description: "Years in Molecular Biology",
+			color: "wet",
 		},
 		{
 			value: 4,
 			description: "Years in Bioinformatics",
+			color: "dry",
 		}
 	],
 	contactInfo: {
@@ -48,15 +50,20 @@ export const ME = {
 		linkedin: "https://www.linkedin.com/in/anastasia-rusakovich/",
 		resumeDoc: "resume.pdf",
 	},
-	aboutMe:
-		"I am a molecular biologist and bioinformatician. I have experience in conducting research and analyzing data using modern technologies. I am passionate about learning new things and sharing knowledge with others.",
+	aboutMe: `I <span style="color:#62C4C3;font-weight:600;">started in the lab with a pipette</span>, and somewhere along the way learned to <span style="color:#FAE081;font-weight:600;">write the code</span> that makes sense of my data. Over the last few years I've been deep in <span style="color:#FAE081;font-weight:600;">bioinformatics</span> - moving from <span style="color:#FAE081;font-weight:600;"> shell scripts</span> to <span style="color:#FAE081;font-weight:600;">reproducible containers and pipelines</span>. But I still remember how to <span style="color:#62C4C3;font-weight:600;">aspirate around a blood clot</span> to save a pipette, <span style="color:#62C4C3;font-weight:600;">give bacteria the heat shock</span> of their lives to sneak in a plasmid, or <span style="color:#62C4C3;font-weight:600;">dissect a fly larva's brain</span> when the experiment calls for it.`,
 };
 
 export const SOCIALS = [
-	{
-		name: "GitHub",
-		url: "https://github.com/aerusakovich",
-		icon: "github-fill",
-		show: true,
-	},
+  {
+    name: "GitHub",
+    url: "https://github.com/aerusakovich",
+    icon: "github-fill",
+    show: true,
+  },
+  {
+    name: "GitLab",
+    url: "https://gitlab.com/aerusakovich",
+    icon: "gitlab-fill",
+    show: true,
+  },
 ];

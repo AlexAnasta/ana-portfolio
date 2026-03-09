@@ -1,35 +1,101 @@
 ---
-// lib imports
 import { formatDatetime } from "../lib/utils";
-// component imports
 import { Badge } from "./ui/badge";
 
 interface Edu {
-	title: string;
-	school: string;
-	location: string;
-	startDate: string;
-	endDate?: string;
-	description: string;
-	currentUni: boolean;
+  title: string;
+  school: string;
+  location: string;
+  startDate: string;
+  endDate?: string;
+  description: string;
+  thesis?: string;
+  thesisLabel?: string;
+  honours?: boolean;
+  lab?: string;
+  supervisors?: string[];
+  website?: string;
+  currentUni: boolean;
+  type: "degree" | "training";
+  badges?: string[];
 }
 
-const { eduData } = Astro.props; // Ensure correct typing for the props
-const { title, school, location, startDate, endDate, description, currentUni } =
-	eduData as Edu;
+const { eduData } = Astro.props;
+const { title, school, location, startDate, endDate, description, thesis, thesisLabel, honours, lab, supervisors, website, currentUni, badges } =
+  eduData as Edu;
 ---
 
 <div class="flex flex-col gap-2">
-	<Badge className="bg-primary-light dark:bg-primary-dark w-fit rounded-md">
-		{formatDatetime(startDate)} - {
-			currentUni || !endDate ? "Present" : formatDatetime(endDate)
-		}
-	</Badge>
-	<h3 class="text-xl font-bold">{title}</h3>
-	<div class="flex gap-2">
-		<p>{school}</p>
-		<span>/</span>
-		<p>{location}</p>
-	</div>
-	<p>{description}</p>
+
+  {/* Date + Honours + lab badges */}
+  <div class="flex flex-wrap gap-2 items-center">
+    <Badge className="bg-primary-light dark:bg-primary-dark w-fit rounded-md">
+      {formatDatetime(startDate)} — {
+        currentUni || !endDate ? "Present" : formatDatetime(endDate)
+      }
+    </Badge>
+    {honours && (
+		<Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 w-fit rounded-md">
+		Honours
+		</Badge>
+    )}
+    {badges?.map((badge) => (
+		<span class={`text-xs px-2 py-0.5 rounded font-bold capitalize transition-colors cursor-default ${
+		badge === "wet lab"
+			? "bg-teal-100 text-teal-700 hover:bg-teal-100/70 dark:bg-teal-900 dark:text-teal-300 dark:hover:bg-teal-900/70"
+			: "bg-amber-100 text-amber-700 hover:bg-amber-100/70 dark:bg-amber-900 dark:text-amber-300 dark:hover:bg-amber-900/70"
+		}`}>
+        {badge}
+      </span>
+    ))}
+  </div>
+
+  {/* Title */}
+  <h3 class="text-xl font-bold">{title}</h3>
+
+  {/* Institute + Location in one line */}
+  <div class="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-medium text-teal-600 dark:text-teal-400">
+    {website ? (
+      <a href={website} target="_blank" rel="noopener noreferrer"
+        class="hover:underline underline-offset-2">
+        {school}
+      </a>
+    ) : (
+      <span>{school}</span>
+    )}
+    <span class="text-teal-400 dark:text-teal-600">·</span>
+    <span class="flex items-center gap-1">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+      </svg>
+      {location}
+    </span>
+  </div>
+
+  {/* Lab */}
+  {lab && (
+    <p class="text-sm text-yellow-500 dark:text-yellow-400">🔬 {lab}</p>
+  )}
+
+  {/* Description */}
+  <p class="text-sm">{description}</p>
+
+  {/* Thesis toggle */}
+  {thesis && (
+    <details class="group text-sm">
+      <summary class="cursor-pointer list-none flex items-center gap-1 text-yellow-500 dark:text-yellow-400 font-medium w-fit">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 transition-transform group-open:rotate-90 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+        {thesisLabel ?? "Thesis"}
+        {supervisors?.length && (
+          <span class="font-normal text-yellow-400 dark:text-yellow-300 ml-1">
+            · {supervisors.join(", ")}
+          </span>
+        )}
+      </summary>
+      <p class="mt-1 pl-5 text-n700 dark:text-n200 italic">{thesis}</p>
+    </details>
+  )}
+
 </div>
