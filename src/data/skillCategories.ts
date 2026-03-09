@@ -1,4 +1,4 @@
-export type Badge = "wet lab" | "dry lab";
+export type Badge = "wet lab" | "dry lab" | "honours";
 
 export interface Skill {
   name: string;

@@ -1,6 +1,8 @@
 import * as React from "react";
-import { skillIconRegistry } from "./icons/SkillIcons";
+
 import type { Badge } from "../data/skillCategories";
+import { BADGE_BASE_CLASS, getBadgeClass } from "../lib/badgeStyles";
+import { skillIconRegistry } from "./icons/SkillIcons";
 
 interface Props {
   name: string;
@@ -12,6 +14,7 @@ interface Props {
 
 export default function CustomSkillCard({ name, description, iconKey, badges, nameItalic }: Props) {
   const Icon = skillIconRegistry[iconKey];
+
   return (
     <div className="flex flex-col gap-2 bg-white dark:bg-n700 p-4 rounded-md">
       {Icon && (
@@ -25,11 +28,7 @@ export default function CustomSkillCard({ name, description, iconKey, badges, na
           {badges.map((badge) => (
             <span
               key={badge}
-                className={`text-xs px-2 py-0.5 rounded font-bold capitalize transition-colors cursor-default ${
-                badge === "wet lab"
-                    ? "bg-teal-100 text-teal-700 hover:bg-teal-100/70 dark:bg-teal-900 dark:text-teal-300 dark:hover:bg-teal-900/70"
-                    : "bg-amber-100 text-amber-700 hover:bg-amber-100/70 dark:bg-amber-900 dark:text-amber-300 dark:hover:bg-amber-900/70"
-                }`}
+              className={`${BADGE_BASE_CLASS} ${getBadgeClass(badge)}`}
             >
               {badge}
             </span>

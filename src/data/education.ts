@@ -9,7 +9,6 @@ interface Education {
   description: string;
   thesis?: string;
   thesisLabel?: string;
-  honours?: boolean;
   lab?: string;
   supervisors?: string[];
   website?: string;
@@ -43,11 +42,10 @@ const education: Education[] = [
     description: "FOXO3A gene polymorphism and genetic predisposition to human longevity.",
     thesis: "FOXO3A gene polymorphism and genetic predisposition to human longevity.",
     thesisLabel: "MSc Project",
-    honours: true,
     website: "https://international.mgavm.ru/",
     currentUni: false,
     type: "degree",
-    badges: ["wet lab"],
+    badges: ["wet lab", "honours"],
   },
   {
     title: "Bachelor of Science — Genetics & Selection",
@@ -58,11 +56,10 @@ const education: Education[] = [
     description: "FCER1A polymorphisms for predicting risk of IgE-dependent diseases.",
     thesis: "FCER1A polymorphisms (rs2251746 and rs2427837) for predicting risk of IgE-dependent diseases.",
     thesisLabel: "BSc Project",
-    honours: true,
     website: "https://international.mgavm.ru/",
     currentUni: false,
     type: "degree",
-    badges: ["wet lab"],
+    badges: ["wet lab", "honours"],
   },
   {
     title: "Machine Learning in Python for Bioinformatics",

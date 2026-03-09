@@ -1,4 +1,5 @@
 ---
+import { BADGE_BASE_CLASS, getBadgeClass } from "../lib/badgeStyles";
 import { formatDatetime } from "../lib/utils";
 import { Badge } from "./ui/badge";
 
@@ -11,7 +12,6 @@ interface Edu {
   description: string;
   thesis?: string;
   thesisLabel?: string;
-  honours?: boolean;
   lab?: string;
   supervisors?: string[];
   website?: string;
@@ -21,30 +21,21 @@ interface Edu {
 }
 
 const { eduData } = Astro.props;
-const { title, school, location, startDate, endDate, description, thesis, thesisLabel, honours, lab, supervisors, website, currentUni, badges } =
+const { title, school, location, startDate, endDate, description, thesis, thesisLabel, lab, supervisors, website, currentUni, badges } =
   eduData as Edu;
 ---
 
 <div class="flex flex-col gap-2">
 
-  {/* Date + Honours + lab badges */}
+  {/* Date + lab badges */}
   <div class="flex flex-wrap gap-2 items-center">
     <Badge className="bg-primary-light dark:bg-primary-dark w-fit rounded-md">
       {formatDatetime(startDate)} — {
         currentUni || !endDate ? "Present" : formatDatetime(endDate)
       }
     </Badge>
-    {honours && (
-		<Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 w-fit rounded-md">
-		Honours
-		</Badge>
-    )}
     {badges?.map((badge) => (
-		<span class={`text-xs px-2 py-0.5 rounded font-bold capitalize transition-colors cursor-default ${
-		badge === "wet lab"
-			? "bg-teal-100 text-teal-700 hover:bg-teal-100/70 dark:bg-teal-900 dark:text-teal-300 dark:hover:bg-teal-900/70"
-			: "bg-amber-100 text-amber-700 hover:bg-amber-100/70 dark:bg-amber-900 dark:text-amber-300 dark:hover:bg-amber-900/70"
-		}`}>
+      <span class={`${BADGE_BASE_CLASS} ${getBadgeClass(badge)}`}>
         {badge}
       </span>
     ))}

@@ -1,4 +1,5 @@
 ---
+import { BADGE_BASE_CLASS, getBadgeClass } from "../lib/badgeStyles";
 import { formatDatetime } from "../lib/utils";
 import { Badge } from "./ui/badge";
 
@@ -28,11 +29,7 @@ const { title, company, location, startDate, endDate, description, goals, curren
       {formatDatetime(startDate)} — {currentJob ? "Present" : endDate ? formatDatetime(endDate) : "N/A"}
     </Badge>
     {badges?.map((badge) => (
-		<span class={`text-xs px-2 py-0.5 rounded font-bold capitalize transition-colors cursor-default ${
-		badge === "wet lab"
-			? "bg-teal-100 text-teal-700 hover:bg-teal-100/70 dark:bg-teal-900 dark:text-teal-300 dark:hover:bg-teal-900/70"
-			: "bg-amber-100 text-amber-700 hover:bg-amber-100/70 dark:bg-amber-900 dark:text-amber-300 dark:hover:bg-amber-900/70"
-		}`}>
+      <span class={`${BADGE_BASE_CLASS} ${getBadgeClass(badge)}`}>
         {badge}
       </span>
     ))}
