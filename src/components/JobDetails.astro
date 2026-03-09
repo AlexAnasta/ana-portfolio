@@ -25,7 +25,7 @@ const { title, company, location, startDate, endDate, description, goals, curren
   {/* Date + lab badges */}
   <div class="flex flex-wrap gap-2 items-center">
     <Badge className="bg-primary-light dark:bg-primary-dark w-fit rounded-md whitespace-nowrap">
-      {formatDatetime(startDate)} — {currentJob ? "Present" : formatDatetime(endDate)}
+      {formatDatetime(startDate)} — {currentJob ? "Present" : endDate ? formatDatetime(endDate) : "N/A"}
     </Badge>
     {badges?.map((badge) => (
 		<span class={`text-xs px-2 py-0.5 rounded font-bold capitalize transition-colors cursor-default ${
