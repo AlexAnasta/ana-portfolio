@@ -7,6 +7,7 @@ import ProfileActionButton from "../components/ProfileActionButton.astro";
 import ProfileFacts from "../components/ProfileFacts.astro";
 import ProfileInfo from "../components/ProfileInfo.astro";
 import TabsButtons from "../components/TabsButtons.tsx";
+import ResearchStatement from "../components/ResearchStatement.astro";
 import Layout from "../layouts/Layout.astro";
 
 const tabs = [
@@ -26,6 +27,7 @@ const tabs = [
 		<ProfileInfo />
 		<ProfileFacts />
 		<ProfileActionButton />
+		<ResearchStatement />
 		<TabsButtons client:idle tabs={tabs}>
 			<AboutMeCC slot="about" />
 			<Contribution slot="contribution" />

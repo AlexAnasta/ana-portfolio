@@ -11,23 +11,26 @@ interface WorkExperience {
   currentJob: boolean;
   website?: string;
   badges?: Badge[];
+  lab?: string;
+  supervisors?: string[];
 }
 
 const workExperience: WorkExperience[] = [
   {
     title: "PhD Student (Long-Read Transcriptomics & Cancer Research)",
-    startDate: "2023-10-01",
+    startDate: "2023-11-01",
     company: "Institute of Genetics and Development of Rennes (IGDR)",
     location: "Rennes, France",
-    description: "Long-read transcriptomics and circRNA research in melanoma treatment resistance.",
+    description: "Long-read transcriptomics and circRNA research focused on BRAFi resistance in melanoma.",
+    lab: "Gene Expression and Oncogenesis Team",
     goals: [
       "Developed in silico simulation frameworks for circRNA ground-truth generation (Python, Bash, R).",
       "Benchmarked bioinformatics tools using standardized performance metrics.",
       "Analyzed Oxford Nanopore long-read sequencing data.",
       "Performed differential expression and isoform profiling in melanoma cell lines.",
       "Identified circRNA candidates as potential biomarkers and therapeutic targets.",
-      "Executed data analysis on HPC clusters (SLURM, GenOuest).",
-      "Built reproducible workflows with Nextflow and version control (GitHub, GitLab).",
+      "Performed data analysis on HPC clusters (SLURM, GenOuest).",
+      "Built reproducible workflows with Nextflow and Git-based version control (GitHub, GitLab).",
       "Presented research at conferences and published findings in peer-reviewed journals.",
     ],
     website: "https://igdr.univ-rennes.fr/en",
@@ -37,17 +40,19 @@ const workExperience: WorkExperience[] = [
   {
     title: "Research Engineer (Molecular Biology & Bioinformatics)",
     startDate: "2019-04-01",
-    endDate: "2023-11-07",
+    endDate: "2023-10-27",
     company: "Joint Institute for Nuclear Research (JINR)",
     location: "Dubna, Russia",
-    description: "Combined wet-lab molecular biology and bioinformatics analysis for NGS projects.",
-    goals: [
+    description: "Combined wet-lab molecular biology with bioinformatics analysis in radiobiology and genetics projects",
+    lab: "Laboratory of Nuclear Problems",
+	goals: [
       "Prepared H. sapiens, D. melanogaster, and E. coli samples for molecular workflows.",
-      "Performed PCR, RT-PCR, iPCR, and Long-PCR, including primer and TaqMan probe design.",
-      "Handled Sanger sequencing analysis and NGS sample preparation (Illumina).",
+      "Performed PCR, RT-PCR, iPCR, and long range PCR, including primer and TaqMan probe design.",
+      "Performed Sanger sequencing analysis and NGS sample preparation (Illumina).",
       "Conducted NGS quality control, trimming, mapping, and variant analysis.",
+      "Conducted plasmid design and cloning workflows, including plasmid extraction and bacterial transformation.",
       "Automated analysis tasks with Bash, R, and Python scripting.",
-      "Presented work at conferences, supervised international Master's students, and contributed to patents.",
+      "Presented work at conferences, supervised international Master's students, and contributed to national patents.",
     ],
     website: "https://www.jinr.ru/main-en/",
     currentJob: false,
@@ -59,11 +64,11 @@ const workExperience: WorkExperience[] = [
     endDate: "2019-03-31",
     company: "Joint Institute for Nuclear Research (JINR)",
     location: "Dubna, Russia",
-    description: "Supported cell culture activities in molecular biology projects.",
-    goals: [
+    description: "Assisted with cell culture in a radiobiology project focused on human cell radioprotection.",
+   	lab: "Laboratory of Nuclear Problems",
+	goals: [
       "Maintained HEK293 mammalian cell cultures.",
       "Supported routine lab operations and documentation.",
-      "Contributed to literature review for ongoing projects.",
     ],
     website: "https://www.jinr.ru/main-en/",
     currentJob: false,
@@ -75,10 +80,11 @@ const workExperience: WorkExperience[] = [
     endDate: "2016-08-30",
     company: "Joint Institute for Nuclear Research (JINR)",
     location: "Dubna, Russia",
-    description: "Assisted with sample preparation for neutron activation analysis.",
-    goals: [
+    description: "Assisted with sample preparation for neutron activation analysis in ecological studies (ICP Vegetation Programme).",
+    lab: "Laboratory of Neutron Physics",
+	goals: [
       "Prepared plant, moss, and meteorite samples for neutron activation analysis.",
-      "Followed laboratory protocols for sample processing and traceability.",
+      "Followed laboratory protocols for sample processing.",
     ],
     website: "https://www.jinr.ru/main-en/",
     currentJob: false,

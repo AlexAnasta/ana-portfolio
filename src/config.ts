@@ -66,4 +66,10 @@ export const SOCIALS = [
     icon: "gitlab-fill",
     show: true,
   },
+ {
+    name: "ORCID",
+    url: "https://orcid.org/0000-0001-9663-6238",
+    icon: "orcid",
+    show: true,
+  },
 ];

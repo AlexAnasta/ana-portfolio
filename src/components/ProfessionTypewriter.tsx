@@ -10,6 +10,7 @@ const items = [
   { text: "NGS",                   color: "#FAE081" },
   { text: "Long-read sequencing",  color: "#FAE081" },
   { text: "Molecular diagnostics", color: "#62C4C3" },
+  { text: "Radiobiology",          color: "#62C4C3" }
 ];
 
 const TYPE_SPEED  = 60;

@@ -1,6 +1,5 @@
 ---
 // config import
-import { ME } from "@/config";
 import education from "@/data/education.ts";
 // data imports
 import workExperience from "@/data/Jobs.ts";
@@ -12,11 +11,8 @@ import JobDetails from "./JobDetails.astro";
 <div
 	class="relative flex flex-col gap-8 text-n700 dark:text-n200 w-full mt-10 px-4"
 >
-	{/*Description or About me -- Section*/}
-	<div class="mb-4">
-	<p set:html={ME.aboutMe} />
-	</div>
-	{/*Work experience section*/}
+
+{/*Work experience section*/}
 	<div class="mb-4">
 		<h2 class="text-3xl font-bold mb-4 text-center text-primary-dark">Work Experience</h2>
 		<div class="flex flex-col gap-6">

@@ -14,10 +14,12 @@ interface Job {
   currentJob: boolean;
   website?: string;
   badges?: string[];
+  lab?: string;
+  supervisors?: string[];
 }
 
 const { jobData } = Astro.props;
-const { title, company, location, startDate, endDate, description, goals, currentJob, website, badges } =
+const { title, company, location, startDate, endDate, description, goals, currentJob, website, badges, lab, supervisors } =
   jobData as Job;
 ---
 
@@ -56,6 +58,11 @@ const { title, company, location, startDate, endDate, description, goals, curren
       {location}
     </span>
   </div>
+
+  {/* Lab */}
+  {lab && (
+    <p class="text-sm text-yellow-500 dark:text-yellow-400">🔬 {lab}{supervisors?.length ? <span class="font-normal text-yellow-400 dark:text-yellow-300"> · {supervisors.join(", ")}</span> : ""}</p>
+  )}
 
   {/* Description */}
   <p class="text-sm">{description}</p>

@@ -28,13 +28,15 @@ const projects = defineCollection({
 	schema: ({ image }) =>
 		z.object({
 			title: z.string(),
+			type: z.enum(["paper", "patent"]).optional().default("paper"),
 			startDate: z.date(),
-			endDate: z.date(),
+			endDate: z.date().optional(),
 			summary: z.string(),
 			url: z.string(),
 			cover: image(),
 			tags: z.array(z.string()),
-			ogImage: z.string(),
+			ogImage: z.string().optional(),
+			pciUrl: z.string().optional(),
 		}),
 });
 
