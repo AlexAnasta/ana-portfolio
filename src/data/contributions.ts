@@ -20,6 +20,27 @@ export interface CodeContribution {
   tags: string[];
 }
 
+export interface Grant {
+  title: string;
+  issuedBy: string;
+  date: string;
+  url?: string;
+}
+
+export const grants: Grant[] = [
+  {
+    title: "Doctoral Fellowship",
+    issuedBy: "French Ministry of Higher Education and Research",
+    date: "Nov 2023",
+  },
+  {
+    title: "SFBI Travel Grant",
+    issuedBy: "SFBI",
+    date: "Jun 2025",
+    url: "https://www.sfbi.fr",
+  },
+];
+
 export const publications: Publication[] = [
   {
     type: "paper",
