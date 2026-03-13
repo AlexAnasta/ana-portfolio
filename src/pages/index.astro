@@ -13,7 +13,7 @@ import Layout from "../layouts/Layout.astro";
 const tabs = [
 	{ value: "about", label: "About" },
 	{ value: "contribution", label: "Contribution" },
-	{ value: "communication", label: "Communication" },
+	// { value: "communication", label: t("home.tabs.communication") },
 	{ value: "skills", label: "Skills" },
 ] as const;
 ---
@@ -31,7 +31,7 @@ const tabs = [
 		<TabsButtons client:idle tabs={tabs}>
 			<AboutMeCC slot="about" />
 			<Contribution slot="contribution" />
-			<Communication slot="communication" />
+			<!-- <Communication slot="communication" /> -->
 			<Skills slot="skills" />
 		</TabsButtons>
 	</>
