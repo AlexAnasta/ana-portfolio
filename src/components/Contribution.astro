@@ -1,5 +1,15 @@
 ---
-import { publications, codeContributions, grants } from "@/data/contributions";
+import type { Locale } from "@/i18n";
+import { useTranslations } from "@/i18n";
+import { getLocalizedContent } from "@/i18n/content";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+const { publications, codeContributions, grants } = getLocalizedContent(locale);
 
 const papers = publications.filter((p) => p.type === "paper");
 const patents = publications.filter((p) => p.type === "patent");
@@ -12,7 +22,7 @@ const projects = codeContributions.filter((c) => c.type === "project");
 
   {/* ── Papers ── */}
   <section>
-    <h2 class="text-3xl font-bold mb-6 text-center text-primary-dark">Papers</h2>
+    <h2 class="text-3xl font-bold mb-6 text-center text-primary-dark">{t("home.contribution.papers")}</h2>
     <div class="flex flex-col gap-6">
       {papers.map((paper) => (
         <div class="flex flex-col gap-2">
@@ -59,7 +69,7 @@ const projects = codeContributions.filter((c) => c.type === "project");
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/>
               </svg>
-              Recommended by PCI Genomics
+              {t("home.contribution.pciRecommended")}
             </a>
           )}
         </div>
@@ -69,7 +79,7 @@ const projects = codeContributions.filter((c) => c.type === "project");
 
   {/* ── Patents ── */}
   <section>
-    <h2 class="text-3xl font-bold mb-6 text-center text-primary-dark">Patents</h2>
+    <h2 class="text-3xl font-bold mb-6 text-center text-primary-dark">{t("home.contribution.patents")}</h2>
     <div class="flex flex-col gap-4">
       {patents.map((patent) => (
         <a
@@ -112,7 +122,7 @@ const projects = codeContributions.filter((c) => c.type === "project");
   {/* ── Workflows & Containers ── */}
   {(workflows.length > 0 || containers.length > 0) && (
     <section>
-      <h2 class="text-3xl font-bold mb-6 text-center text-primary-dark">Workflows & Containers</h2>
+      <h2 class="text-3xl font-bold mb-6 text-center text-primary-dark">{t("home.contribution.workflowsContainers")}</h2>
       <div class="flex flex-col gap-3">
         {[...workflows, ...containers].map((item) => (
           <a
@@ -157,7 +167,7 @@ const projects = codeContributions.filter((c) => c.type === "project");
   {/* ── Projects ── */}
   {projects.length > 0 && (
     <section>
-      <h2 class="text-3xl font-bold mb-6 text-center text-primary-dark">Projects</h2>
+      <h2 class="text-3xl font-bold mb-6 text-center text-primary-dark">{t("home.contribution.projects")}</h2>
       <div class="flex flex-col gap-3">
         {projects.map((item) => (
           <a
@@ -196,7 +206,7 @@ const projects = codeContributions.filter((c) => c.type === "project");
   {/* ── Grants & Fellowships ── */}
   {grants.length > 0 && (
     <section>
-      <h2 class="text-3xl font-bold mb-6 text-center text-primary-dark">Grants & Fellowships</h2>
+      <h2 class="text-3xl font-bold mb-6 text-center text-primary-dark">{t("home.contribution.grantsFellowships")}</h2>
       <div class="flex flex-col gap-3">
         {grants.map((grant) => (
           <div class="flex items-center gap-4 rounded-xl border border-n200 dark:border-n700 hover:border-primary-light dark:hover:border-primary-dark bg-n100/60 dark:bg-n800/60 px-4 py-3 transition-colors group">

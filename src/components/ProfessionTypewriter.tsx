@@ -1,24 +1,21 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
-const items = [
-  { text: "Molecular biology",     color: "#62C4C3" },
-  { text: "Bioinformatics",        color: "#FAE081" },
-  { text: "Transcriptomics",       color: "#FAE081" },
-  { text: "Cancer research",       color: "#FAE081" },
-  { text: "Genetics",              color: "#62C4C3" },
-  { text: "Genomics",              color: "#FAE081" },
-  { text: "NGS",                   color: "#FAE081" },
-  { text: "Long-read sequencing",  color: "#FAE081" },
-  { text: "Molecular diagnostics", color: "#62C4C3" },
-  { text: "Radiobiology",          color: "#62C4C3" }
-];
+import type { Locale } from "@/i18n";
+import { getLocalizedContent } from "@/i18n/content";
 
 const TYPE_SPEED  = 60;
 const DELETE_SPEED = 35;
 const HOLD_AFTER_TYPE   = 1800;
 const HOLD_AFTER_DELETE = 400;
 
-export default function ProfessionTypewriter() {
+interface Props {
+  locale: Locale;
+}
+
+export default function ProfessionTypewriter({ locale }: Props) {
+  const { messages } = getLocalizedContent(locale);
+  const { prefix, items } = messages.home.professionTypewriter;
+
   const [index, setIndex]   = useState(0);
   const [displayed, setDisplayed] = useState("");
   const [phase, setPhase]   = useState<"typing" | "holding" | "deleting" | "waiting">("typing");
@@ -52,7 +49,7 @@ export default function ProfessionTypewriter() {
 
   return (
     <p className="text-sm text-n500 dark:text-n200 h-5">
-      Researcher in{" "}
+      {prefix}{" "}
       <span style={{ color: current.color, fontWeight: 600 }}>
         {displayed}
       </span>

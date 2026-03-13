@@ -1,11 +1,13 @@
 ---
-import { ME } from "@/config";
+import { getMeConfig } from "@/config";
+import { getLocaleFromUrl } from "@/i18n";
 import ProfileImage from "./ProfileImage.astro";
 import DotWave from "./DotWave.astro";
 import Social from "./Social.astro";
 import ProfessionTypewriter from "./ProfessionTypewriter";
 
-const { name } = ME;
+const locale = getLocaleFromUrl(Astro.url);
+const { name } = getMeConfig(locale);
 ---
 
 <div class="w-full flex items-center justify-center mt-5">
@@ -19,7 +21,7 @@ const { name } = ME;
         <h1 class="text-xl md:text-2xl lg:text-4xl xl:text-4xl text-n900 dark:text-white">
           {name}
         </h1>
-        <ProfessionTypewriter client:load />
+        <ProfessionTypewriter client:load locale={locale} />
       </div>
       <Social />
     </div>

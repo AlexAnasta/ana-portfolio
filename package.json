@@ -37,8 +37,10 @@
 		"lint": "biome lint .",
 		"format": "biome format --write .",
 		"check": "biome check .",
+    "check:i18n": "node scripts/check-translations.mjs",
 		"check:fix": "biome check --write .",
-		"check:fix:unsafe": "biome check --write --unsafe ."
+		"check:fix:unsafe": "biome check --write --unsafe .",
+    "prepare": "husky"
 	},
 	"dependencies": {
 		"@astrojs/check": "^0.9.4",
@@ -65,6 +67,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.4.5",
-		"@tailwindcss/typography": "^0.5.15"
+		"@tailwindcss/typography": "^0.5.15",
+    "husky": "^9.1.7"
 	}
 }

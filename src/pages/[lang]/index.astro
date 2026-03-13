@@ -1,23 +1,36 @@
 ---
 import Skills from "@/components/Skills.astro";
 import Contribution from "@/components/Contribution.astro";
-import Communication from "@/components/Communication.astro";
-import AboutMeCC from "../components/AboutMeCC.astro";
-import ProfileActionButton from "../components/ProfileActionButton.astro";
-import ProfileFacts from "../components/ProfileFacts.astro";
-import ProfileInfo from "../components/ProfileInfo.astro";
-import TabsButtons from "../components/TabsButtons.tsx";
-import ResearchStatement from "../components/ResearchStatement.astro";
-import Layout from "../layouts/Layout.astro";
-import { getLocaleFromUrl, useTranslations } from "@/i18n";
+import AboutMeCC from "@/components/AboutMeCC.astro";
+import ProfileActionButton from "@/components/ProfileActionButton.astro";
+import ProfileFacts from "@/components/ProfileFacts.astro";
+import ProfileInfo from "@/components/ProfileInfo.astro";
+import TabsButtons from "@/components/TabsButtons.tsx";
+import ResearchStatement from "@/components/ResearchStatement.astro";
+import Layout from "@/layouts/Layout.astro";
+import {
+	defaultLocale,
+	isSupportedLocale,
+	locales,
+	type Locale,
+	useTranslations,
+} from "@/i18n";
 
-const locale = getLocaleFromUrl(Astro.url);
+export function getStaticPaths() {
+	return locales.map((lang) => ({
+		params: { lang },
+	}));
+}
+
+const paramLocale = Astro.params.lang ?? defaultLocale;
+const locale: Locale = isSupportedLocale(paramLocale)
+	? paramLocale
+	: defaultLocale;
 const t = useTranslations(locale);
 
 const tabs = [
 	{ value: "about", label: t("home.tabs.about") },
 	{ value: "contribution", label: t("home.tabs.contribution") },
-	// { value: "communication", label: t("home.tabs.communication") },
 	{ value: "skills", label: t("home.tabs.skills") },
 ] as const;
 ---
@@ -36,7 +49,6 @@ const tabs = [
 		<TabsButtons client:idle tabs={tabs}>
 			<AboutMeCC slot="about" locale={locale} />
 			<Contribution slot="contribution" locale={locale} />
-			<!-- <Communication slot="communication" /> -->
 			<Skills slot="skills" locale={locale} />
 		</TabsButtons>
 	</>

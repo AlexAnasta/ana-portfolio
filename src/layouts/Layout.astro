@@ -2,9 +2,11 @@
 import { ClientRouter } from "astro:transitions";
 import { cn } from "../lib/utils";
 import "@/styles/globals.css";
+import type { Locale } from "@/i18n";
 
-import { SITE } from "@/config";
+import { SITE, getSiteConfig } from "@/config";
 import Footer from "../components/Footer.astro";
+import LocaleSwitcher from "../components/LocaleSwitcher.astro";
 import Navbar from "../components/Navbar.astro";
 
 interface Props {
@@ -15,57 +17,69 @@ interface Props {
 	author?: string;
 	imageOg?: string;
 	canonicalURL?: string;
+	lang?: Locale;
 }
 
 const {
-	title = SITE.title,
-	description = SITE.description,
-	tags = SITE.tags,
-	author = SITE.author,
 	scrollSmooth,
+	lang = (SITE.lang as Locale) ?? "en",
+	title,
+	description,
+	tags,
+	author = SITE.author,
 	canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
 	imageOg = SITE.ogImage,
 } = Astro.props;
+
+const siteConfig = getSiteConfig(lang);
+const resolvedTitle = title ?? siteConfig.title;
+const resolvedDescription = description ?? siteConfig.description;
+const resolvedTags = tags ?? siteConfig.tags;
 ---
 
 <!doctype html>
-<html lang={SITE.lang ?? "en"} class={cn({ "scroll-smooth": scrollSmooth })}>
+<html lang={lang} class={cn({ "scroll-smooth": scrollSmooth })}>
 	<head>
 		<meta name="msapplication-TileColor" content="#000000" />
 		<meta name="viewport" content="width=device-width" />
 		<meta charset="UTF-8" />
 		<meta name="generator" content={Astro.generator} />
 
-		<meta name="title" content={title} />
-		<meta name="description" content={description} />
-		<meta name="keywords" content={tags.join(", ")} />
+		<meta name="title" content={resolvedTitle} />
+		<meta name="description" content={resolvedDescription} />
+		<meta name="keywords" content={resolvedTags.join(", ")} />
 		<meta name="author" content={author} />
 		<link rel="sitemap" href="/sitemap-index.xml" />
 		<link rel="icon" href={SITE.favicon} />
 		<link rel="canonical" href={canonicalURL} />
 
 		<!-- Open Graph / Facebook -->
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description} />
+		<meta property="og:title" content={resolvedTitle} />
+		<meta property="og:description" content={resolvedDescription} />
 		<meta property="og:url" content={canonicalURL} />
 		<meta property="og:image" content={imageOg} />
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
 		<meta property="twitter:url" content={canonicalURL} />
-		<meta property="twitter:title" content={title} />
-		<meta property="twitter:description" content={description} />
+		<meta property="twitter:title" content={resolvedTitle} />
+		<meta property="twitter:description" content={resolvedDescription} />
 		<meta property="twitter:image" content={imageOg} />
 
-		<title>{title}</title>
+		<title>{resolvedTitle}</title>
 		<ClientRouter />
 	</head>
 	<body
 		class="bg-light-theme dark:bg-dark-theme antialiased text-n700 dark:text-light-theme w-full h-screen flex flex-col"
 	>
 		<!-- <Navbar/> -->
+    <nav
+      class="container pt-4 flex items-center justify-end gap-2 text-sm"
+    >
+      <LocaleSwitcher locale={lang} />
+    </nav>
 		<main class="container py-12 flex gap-8 flex-col" role="main" id="top">
 			<slot />
 		</main>
-		<Footer />
+		<Footer locale={lang} />
 	</body>
 </html>

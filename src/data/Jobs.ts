@@ -65,7 +65,7 @@ const workExperience: WorkExperience[] = [
     company: "Joint Institute for Nuclear Research (JINR)",
     location: "Dubna, Russia",
     description: "Assisted with cell culture in a radiobiology project focused on human cell radioprotection.",
-   	lab: "Laboratory of Nuclear Problems",
+    lab: "Laboratory of Nuclear Problems",
 	goals: [
       "Maintained HEK293 mammalian cell cultures.",
       "Supported routine lab operations and documentation.",

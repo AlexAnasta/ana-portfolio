@@ -1,20 +1,23 @@
 ---
-import { ME } from "@/config";
-const { profileFacts } = ME;
+import { getMeConfig } from "@/config";
+import { getLocaleFromUrl } from "@/i18n";
+
+const locale = getLocaleFromUrl(Astro.url);
+const { profileFacts } = getMeConfig(locale);
 ---
 
 <div class="flex justify-around gap-1 text-center">
   {profileFacts.map((fact) => (
     <div class="flex flex-col items-center justify-center gap-2">
       <h3
-        class="text-md font-bold"
+        class="text-2xl font-bold"
         style={fact.color === "wet" ? "color: #62C4C3" : "color: #FAE081"}
       >
         {fact.value}
       </h3>
       <p class="text-md text-n500 dark:text-n200">
-        Years in <span style={fact.color === "wet" ? "color: #62C4C3" : "color: #FAE081"}>
-          {fact.description.replace("Years in ", "")}
+        <span style={fact.color === "wet" ? "color: #62C4C3" : "color: #FAE081"}>
+          {fact.description}
         </span>
       </p>
     </div>

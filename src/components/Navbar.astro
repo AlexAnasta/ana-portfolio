@@ -3,10 +3,12 @@
 import { Icon } from "astro-icon/components";
 // config import
 import { SITE } from "../config";
-// data imports
-import { menu } from "../data/menu";
+import { getLocaleFromUrl } from "@/i18n";
+import { getLocalizedContent } from "@/i18n/content";
 
 const pathname = Astro.url.pathname;
+const locale = getLocaleFromUrl(Astro.url);
+const { menu } = getLocalizedContent(locale);
 ---
 
 <nav class="bg-white dark:bg-n700 fixed w-full z-20 top-0 start-0" id="menu">

@@ -1,11 +1,18 @@
 ---
-// config import
-import education from "@/data/education.ts";
-// data imports
-import workExperience from "@/data/Jobs.ts";
+import type { Locale } from "@/i18n";
+import { useTranslations } from "@/i18n";
+import { getLocalizedContent } from "@/i18n/content";
 import EduDetail from "./EduDetail.astro";
 // component imports
 import JobDetails from "./JobDetails.astro";
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+const { education, jobs } = getLocalizedContent(locale);
 ---
 
 <div
@@ -14,21 +21,21 @@ import JobDetails from "./JobDetails.astro";
 
 {/*Work experience section*/}
 	<div class="mb-4">
-		<h2 class="text-3xl font-bold mb-4 text-center text-primary-dark">Work Experience</h2>
+		<h2 class="text-3xl font-bold mb-4 text-center text-primary-dark">{t("home.about.workExperience")}</h2>
 		<div class="flex flex-col gap-6">
-			{workExperience.map((job) => <JobDetails jobData={job} />)}
+			{jobs.map((job) => <JobDetails jobData={job} />)}
 		</div>
 	</div>
 	{/*Education section*/}
 	<div class="mb-4">
-		<h2 class="text-3xl font-bold mb-4 text-center text-primary-dark">Education</h2>
+		<h2 class="text-3xl font-bold mb-4 text-center text-primary-dark">{t("home.about.education")}</h2>
 		<div class="flex flex-col gap-6">
 			{education.filter((edu) => edu.type === "degree").map((edu) => <EduDetail eduData={edu} />)}
 		</div>
 	</div>
 	{/*Training section*/}
 	<div class="mb-4">
-		<h2 class="text-3xl font-bold mb-4 text-center text-primary-dark">Training</h2>
+		<h2 class="text-3xl font-bold mb-4 text-center text-primary-dark">{t("home.about.training")}</h2>
 		<div class="flex flex-col gap-6">
 			{education.filter((edu) => edu.type === "training").map((edu) => <EduDetail eduData={edu} />)}
 		</div>

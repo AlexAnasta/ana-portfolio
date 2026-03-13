@@ -1,6 +1,7 @@
 ---
 // config import
 import { ME } from "@/config.ts";
+import { getLocaleFromUrl, useTranslations } from "@/i18n";
 import DownloadArrow from "./icons/DownloadArrow.astro";
 import LinkedIn from "./icons/LinkedIn.astro";
 // components imports
@@ -8,6 +9,8 @@ import { Button } from "./ui/button";
 
 const resume = `/${ME.contactInfo.resumeDoc}`;
 const { linkedin, email } = ME.contactInfo;
+const locale = getLocaleFromUrl(Astro.url);
+const t = useTranslations(locale);
 ---
 
 <div class="profile-action-buttons w-full flex gap-2">
@@ -17,7 +20,7 @@ const { linkedin, email } = ME.contactInfo;
 		size={"lg"}
 		className="[&_svg]:size-8 px-4 md:px-8 h-14 cv-btn flex-1 text-n700 bg-primary-light dark:bg-primary-dark hover:bg-primary-hover-light dark:hover:bg-primary-hover-dark"
 	>
-		Download CV
+		{t("home.actions.downloadCv")}
 		<DownloadArrow width={24} height={24} />
 	</Button>
 
@@ -25,7 +28,7 @@ const { linkedin, email } = ME.contactInfo;
 		size="icon"
 		className="[&_svg]:size-8 h-14 w-14 li-btn flex-none text-n700 dark:text-n200 bg-white dark:bg-black hover:bg-grey-500 dark:hover:bg-n700 transition-all"
 	>
-		<a href={linkedin} aria-label="my linkedIn profile link">
+		<a href={linkedin} aria-label={t("home.actions.linkedinAria")}>
 			<LinkedIn width={24} height={24} />
 		</a>
 	</Button>
@@ -33,7 +36,7 @@ const { linkedin, email } = ME.contactInfo;
 		size="icon"
 		className="[&_svg]:size-6 h-14 w-14 li-btn flex-none dark:text-n200 bg-white dark:bg-black hover:bg-grey-500 dark:hover:bg-n700 transition-all"
 	>
-		<a href={`mailto:${email}`} aria-label="send me an email">
+		<a href={`mailto:${email}`} aria-label={t("home.actions.emailAria")}>
 			<svg
 				viewBox="0 0 24 24"
 				xmlns="http://www.w3.org/2000/svg"

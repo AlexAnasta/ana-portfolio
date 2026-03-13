@@ -1,3 +1,6 @@
+import type { Locale } from "@/i18n";
+import { getLocalizedContent } from "@/i18n/content";
+
 export const SITE = {
 	website: "https://anastasia-rusakovich.netlify.app/",
 	title:
@@ -51,6 +54,31 @@ export const ME = {
 		resumeDoc: "resume.pdf",
 	},
 	aboutMe: `I <span style="color:#62C4C3;font-weight:600;">started in the lab with a pipette</span>, and somewhere along the way learned to <span style="color:#FAE081;font-weight:600;">write the code</span> that makes sense of my data. Over the last few years I've been deep in <span style="color:#FAE081;font-weight:600;">bioinformatics</span> - moving from <span style="color:#FAE081;font-weight:600;"> shell scripts</span> to <span style="color:#FAE081;font-weight:600;">reproducible containers and pipelines</span>. But I still remember how to <span style="color:#62C4C3;font-weight:600;">aspirate around a blood clot</span> to save a pipette, <span style="color:#62C4C3;font-weight:600;">give bacteria the heat shock</span> of their lives to sneak in a plasmid, or <span style="color:#62C4C3;font-weight:600;">dissect a fly larva's brain</span> when the experiment calls for it.`,
+};
+
+export const getSiteConfig = (locale: Locale) => {
+	const siteLocale = getLocalizedContent(locale).config.site;
+
+	return {
+		...SITE,
+		title: siteLocale.title,
+		description: siteLocale.description,
+		tags: siteLocale.tags,
+	};
+};
+
+export const getMeConfig = (locale: Locale) => {
+	const meLocale = getLocalizedContent(locale).config.me;
+
+	return {
+		...ME,
+		profession: meLocale.profession,
+		profileFacts: ME.profileFacts.map((fact, index) => ({
+			...fact,
+			description: meLocale.profileFactDescriptions[index] ?? fact.description,
+		})),
+		aboutMe: meLocale.aboutMe,
+	};
 };
 
 export const SOCIALS = [

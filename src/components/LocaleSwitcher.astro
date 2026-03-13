@@ -1,0 +1,54 @@
+---
+import { locales, type Locale, useTranslations } from "@/i18n";
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+
+const buildHref = (targetLocale: Locale) => {
+	const segments = Astro.url.pathname.split("/").filter(Boolean);
+
+	if (segments.length > 0 && locales.includes(segments[0] as Locale)) {
+		segments[0] = targetLocale;
+	} else {
+		segments.unshift(targetLocale);
+	}
+
+	return `/${segments.join("/")}/`;
+};
+---
+
+<nav
+	class="w-full flex items-center justify-end gap-2 text-sm"
+	aria-label={t("localeSwitcher.label")}
+>
+	<!-- <span class="text-n500 dark:text-n200">{t("localeSwitcher.label")}:</span> -->
+	{
+		locales.map((item) => {
+			const key =
+				item === "en"
+					? "localeSwitcher.english"
+					: item === "fr"
+						? "localeSwitcher.french"
+						: "localeSwitcher.russian";
+
+			return (
+				<a
+					href={buildHref(item)}
+					class:list={{
+						"px-2 py-1 rounded-md transition-colors": true,
+						"bg-primary-light text-white dark:bg-primary-dark dark:text-n900":
+							locale === item,
+						"text-n600 hover:text-n900 dark:text-n200 dark:hover:text-white":
+							locale !== item,
+					}}
+				>
+					{t(key)}
+				</a>
+			);
+		})
+	}
+</nav>

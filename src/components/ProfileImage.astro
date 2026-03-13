@@ -4,12 +4,15 @@ import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
 
 // config import
-import { ME } from "@/config";
+import { getMeConfig } from "@/config";
+import { getLocaleFromUrl } from "@/i18n";
 
 // Dynamically import image
 
 /* Get image name from config */
-const imageName = ME.profileImage;
+const locale = getLocaleFromUrl(Astro.url);
+const me = getMeConfig(locale);
+const imageName = me.profileImage;
 
 /* Create a full image path */
 const imagePath = `/src/assets/${imageName}`;
