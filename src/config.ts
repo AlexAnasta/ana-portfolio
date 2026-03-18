@@ -26,7 +26,7 @@ export const SITE = {
 	logo: "logo",
 	logoText: "Ana",
 	lang: "en",
-	favicon: "/favicon.png",
+	favicon: "/favicon.ico",
 	repository: "https://github.com/AlexAnasta/ana-portfolio",
 	author: "Anastasia Rusakovich",
 	profile: "https://anastasia-rusakovich.netlify.app/",
