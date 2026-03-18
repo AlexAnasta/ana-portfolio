@@ -14,7 +14,7 @@ const t = useTranslations(locale);
 const { skillCategories, languages } = getLocalizedContent(locale);
 ---
 
-<div class="relative flex flex-col gap-8 text-n700 dark:text-n200 w-full mt-10 px-4">
+<div class="relative flex flex-col gap-8 text-n200 w-full mt-10 px-4">
   {skillCategories.map((category) => (
     <div class="mb-4">
       <h2 class="text-3xl font-bold mb-4 text-center text-primary-dark">{category.title}</h2>

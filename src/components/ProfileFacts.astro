@@ -10,12 +10,11 @@ const { profileFacts } = getMeConfig(locale);
   {profileFacts.map((fact) => (
     <div class="flex flex-col items-center justify-center gap-2">
       <h3
-        class="text-2xl font-bold"
-        style={fact.color === "wet" ? "color: #62C4C3" : "color: #FAE081"}
+        class="text-2xl font-bold text-white"
       >
         {fact.value}
       </h3>
-      <p class="text-md text-n500 dark:text-n200">
+      <p class="text-md text-n200">
         <span style={fact.color === "wet" ? "color: #62C4C3" : "color: #FAE081"}>
           {fact.description}
         </span>

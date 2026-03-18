@@ -25,7 +25,7 @@ const buildHref = (targetLocale: Locale) => {
 	class="w-full flex items-center justify-end gap-2 text-sm"
 	aria-label={t("localeSwitcher.label")}
 >
-	<!-- <span class="text-n500 dark:text-n200">{t("localeSwitcher.label")}:</span> -->
+	<!-- <span class="text-n200">{t("localeSwitcher.label")}:</span> -->
 	{
 		locales.map((item) => {
 			const key =
@@ -36,16 +36,14 @@ const buildHref = (targetLocale: Locale) => {
 						: "localeSwitcher.russian";
 
 			return (
-				<a
-					href={buildHref(item)}
-					class:list={{
-						"px-2 py-1 rounded-md transition-colors": true,
-						"bg-primary-light text-white dark:bg-primary-dark dark:text-n900":
-							locale === item,
-						"text-n600 hover:text-n900 dark:text-n200 dark:hover:text-white":
-							locale !== item,
-					}}
-				>
+              <a
+                href={buildHref(item)}
+                class:list={{
+                  "px-2 py-1 rounded-md transition-colors": true,
+                  "bg-primary-dark text-n900": locale === item,
+                  "text-n200 hover:text-n900": locale !== item,
+                }}
+              >
 					{t(key)}
 				</a>
 			);

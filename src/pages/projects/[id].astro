@@ -31,7 +31,7 @@ const { Content } = await render(post);
 		</div>
 		<div class="flex flex-col gap-6 justify-center items-center">
 			<h1 class="text-3xl font-bold text-center">{title}</h1>
-			<p class="text-sm text-n500 dark:text-primary-light">
+			<p class="text-sm text-primary-light">
 				{tags.join(", ")}
 			</p>
 		</div>
@@ -46,7 +46,7 @@ const { Content } = await render(post);
 		</p>
 		<a href={url}> Visit the project ↗ </a>
 
-		<article id="article" class="mt-8 prose dark:prose-invert">
+		<article id="article" class="mt-8 prose-invert">
 			<Content />
 		</article>
 		<BackToTop />

@@ -48,7 +48,7 @@ export default function ProfessionTypewriter({ locale }: Props) {
   }, [phase, displayed, current]);
 
   return (
-    <p className="text-sm text-n500 dark:text-n200 h-5">
+    <p className="text-sm text-n200 h-5">
       {prefix}{" "}
       <span style={{ color: current.color, fontWeight: 600 }}>
         {displayed}

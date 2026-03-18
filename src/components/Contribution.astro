@@ -18,7 +18,7 @@ const containers = codeContributions.filter((c) => c.type === "container");
 const projects = codeContributions.filter((c) => c.type === "project");
 ---
 
-<div class="flex flex-col gap-12 mt-10 px-4 w-full text-n700 dark:text-n200">
+<div class="flex flex-col gap-12 mt-10 px-4 w-full text-n200">
 
   {/* ── Papers ── */}
   <section>
@@ -30,7 +30,7 @@ const projects = codeContributions.filter((c) => c.type === "project");
             href={paper.url}
             target="_blank"
             rel="noopener noreferrer"
-            class="flex gap-4 rounded-xl border border-n200 dark:border-n700 hover:border-primary-light dark:hover:border-primary-dark bg-n100/60 dark:bg-n800/60 overflow-hidden transition-colors group"
+            class="flex gap-4 rounded-xl border border-n700 hover:border-primary-dark bg-n800/60 overflow-hidden transition-colors group"
           >
             <div class="w-28 md:w-36 shrink-0 overflow-hidden">
               <img
@@ -41,18 +41,18 @@ const projects = codeContributions.filter((c) => c.type === "project");
               />
             </div>
             <div class="flex flex-col gap-2 py-3 pr-4 justify-center">
-              <p class="text-xs text-n500 dark:text-n400">
+              <p class="text-xs text-n400">
                 {paper.year} · {paper.venue}
               </p>
-              <h3 class="text-base font-semibold group-hover:text-primary-light dark:group-hover:text-primary-dark transition-colors leading-snug">
+              <h3 class="text-base font-semibold group-hover:text-primary-dark transition-colors leading-snug">
                 {paper.title}
               </h3>
-              <p class="text-sm text-n600 dark:text-n300 leading-relaxed">
+              <p class="text-sm text-n300 leading-relaxed">
                 {paper.summary}
               </p>
               <div class="flex flex-wrap gap-1 mt-1">
                 {paper.tags.map((tag) => (
-                  <span class="text-xs px-2 py-0.5 rounded bg-n200 dark:bg-n700 text-n600 dark:text-n300">
+                  <span class="text-xs px-2 py-0.5 rounded bg-n700 text-n300">
                     {tag}
                   </span>
                 ))}
@@ -64,7 +64,7 @@ const projects = codeContributions.filter((c) => c.type === "project");
               href={paper.pciUrl}
               target="_blank"
               rel="noopener noreferrer"
-              class="ml-6 flex items-center gap-2 text-sm text-teal-600 dark:text-teal-400 hover:underline underline-offset-2 w-fit"
+              class="ml-6 flex items-center gap-2 text-sm text-teal-400 hover:underline underline-offset-2 w-fit"
             >
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/>
@@ -86,7 +86,7 @@ const projects = codeContributions.filter((c) => c.type === "project");
           href={patent.url}
           target="_blank"
           rel="noopener noreferrer"
-          class="flex gap-4 rounded-xl border border-n200 dark:border-n700 hover:border-primary-light dark:hover:border-primary-dark bg-n100/60 dark:bg-n800/60 overflow-hidden transition-colors group"
+          class="flex gap-4 rounded-xl border border-n700 hover:border-primary-dark bg-n800/60 overflow-hidden transition-colors group"
         >
           <div class="w-28 md:w-36 shrink-0 overflow-hidden">
             <img
@@ -97,18 +97,18 @@ const projects = codeContributions.filter((c) => c.type === "project");
             />
           </div>
           <div class="flex flex-col gap-2 py-3 pr-4 justify-center">
-            <p class="text-xs text-n500 dark:text-n400">
+            <p class="text-xs text-n400">
               {patent.year} · {patent.venue}
             </p>
-            <h3 class="text-base font-semibold group-hover:text-primary-light dark:group-hover:text-primary-dark transition-colors leading-snug">
+            <h3 class="text-base font-semibold group-hover:text-primary-dark transition-colors leading-snug">
               {patent.title}
             </h3>
-            <p class="text-sm text-n600 dark:text-n300 leading-relaxed">
+            <p class="text-sm text-n300 leading-relaxed">
               {patent.summary}
             </p>
             <div class="flex flex-wrap gap-1 mt-1">
               {patent.tags.map((tag) => (
-                <span class="text-xs px-2 py-0.5 rounded bg-n200 dark:bg-n700 text-n600 dark:text-n300">
+                <span class="text-xs px-2 py-0.5 rounded bg-n700 text-n300">
                   {tag}
                 </span>
               ))}
@@ -129,9 +129,9 @@ const projects = codeContributions.filter((c) => c.type === "project");
             href={item.url}
             target="_blank"
             rel="noopener noreferrer"
-            class="flex items-start gap-4 rounded-xl border border-n200 dark:border-n700 hover:border-primary-light dark:hover:border-primary-dark bg-n100/60 dark:bg-n800/60 px-4 py-3 transition-colors group"
+            class="flex items-start gap-4 rounded-xl border border-n700 hover:border-primary-dark bg-n800/60 px-4 py-3 transition-colors group"
           >
-            <div class="mt-0.5 text-n400 dark:text-n500 group-hover:text-primary-light dark:group-hover:text-primary-dark transition-colors shrink-0">
+            <div class="mt-0.5 text-n500 group-hover:text-primary-dark transition-colors shrink-0">
               {item.type === "container" ? (
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
@@ -143,19 +143,19 @@ const projects = codeContributions.filter((c) => c.type === "project");
               )}
             </div>
             <div class="flex flex-col gap-1.5 flex-1">
-              <h3 class="text-base font-semibold group-hover:text-primary-light dark:group-hover:text-primary-dark transition-colors">
+              <h3 class="text-base font-semibold group-hover:text-primary-dark transition-colors">
                 {item.title}
               </h3>
-              <p class="text-sm text-n600 dark:text-n300">{item.description}</p>
+              <p class="text-sm text-n300">{item.description}</p>
               <div class="flex flex-wrap gap-1 mt-0.5">
                 {item.tags.map((tag) => (
-                  <span class="text-xs px-2 py-0.5 rounded bg-n200 dark:bg-n700 text-n600 dark:text-n300">
+                  <span class="text-xs px-2 py-0.5 rounded bg-n700 text-n300">
                     {tag}
                   </span>
                 ))}
               </div>
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 shrink-0 mt-1 text-n400 dark:text-n500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 shrink-0 mt-1 text-n500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
             </svg>
           </a>
@@ -174,27 +174,27 @@ const projects = codeContributions.filter((c) => c.type === "project");
             href={item.url}
             target="_blank"
             rel="noopener noreferrer"
-            class="flex items-start gap-4 rounded-xl border border-n200 dark:border-n700 hover:border-primary-light dark:hover:border-primary-dark bg-n100/60 dark:bg-n800/60 px-4 py-3 transition-colors group"
+            class="flex items-start gap-4 rounded-xl border border-n700 hover:border-primary-dark bg-n800/60 px-4 py-3 transition-colors group"
           >
-            <div class="mt-0.5 text-n400 dark:text-n500 group-hover:text-primary-light dark:group-hover:text-primary-dark transition-colors shrink-0">
+            <div class="mt-0.5 text-n500 group-hover:text-primary-dark transition-colors shrink-0">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
               </svg>
             </div>
             <div class="flex flex-col gap-1.5 flex-1">
-              <h3 class="text-base font-semibold group-hover:text-primary-light dark:group-hover:text-primary-dark transition-colors">
+              <h3 class="text-base font-semibold group-hover:text-primary-dark transition-colors">
                 {item.title}
               </h3>
-              <p class="text-sm text-n600 dark:text-n300">{item.description}</p>
+              <p class="text-sm text-n300">{item.description}</p>
               <div class="flex flex-wrap gap-1 mt-0.5">
                 {item.tags.map((tag) => (
-                  <span class="text-xs px-2 py-0.5 rounded bg-n200 dark:bg-n700 text-n600 dark:text-n300">
+                  <span class="text-xs px-2 py-0.5 rounded bg-n700 text-n300">
                     {tag}
                   </span>
                 ))}
               </div>
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 shrink-0 mt-1 text-n400 dark:text-n500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 shrink-0 mt-1 text-n500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
             </svg>
           </a>
@@ -209,15 +209,15 @@ const projects = codeContributions.filter((c) => c.type === "project");
       <h2 class="text-3xl font-bold mb-6 text-center text-primary-dark">{t("home.contribution.grantsFellowships")}</h2>
       <div class="flex flex-col gap-3">
         {grants.map((grant) => (
-          <div class="flex items-center gap-4 rounded-xl border border-n200 dark:border-n700 hover:border-primary-light dark:hover:border-primary-dark bg-n100/60 dark:bg-n800/60 px-4 py-3 transition-colors group">
-            <div class="text-n400 dark:text-n500 group-hover:text-primary-light dark:group-hover:text-primary-dark transition-colors shrink-0">
+          <div class="flex items-center gap-4 rounded-xl border border-n700 hover:border-primary-dark bg-n800/60 px-4 py-3 transition-colors group">
+            <div class="text-n500 group-hover:text-primary-dark transition-colors shrink-0">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/>
               </svg>
             </div>
             <div class="flex flex-col gap-0.5 flex-1">
-              <h3 class="text-base font-semibold group-hover:text-primary-light dark:group-hover:text-primary-dark transition-colors">{grant.title}</h3>
-              <p class="text-sm text-n500 dark:text-n400">{grant.issuedBy} · {grant.date}</p>
+              <h3 class="text-base font-semibold group-hover:text-primary-dark transition-colors">{grant.title}</h3>
+              <p class="text-sm text-n400">{grant.issuedBy} · {grant.date}</p>
             </div>
           </div>
         ))}

@@ -44,14 +44,14 @@ const researchP2 = parseToneText(t("home.research.p2"));
 const researchP3 = parseToneText(t("home.research.p3"));
 ---
 
-<div class="research-statement w-full my-4 px-4 py-3 rounded-xl border border-primary-light/30 dark:border-primary-dark/30 bg-n100/60 dark:bg-n800/60 backdrop-blur-sm">
-  <p class="text-sm md:text-base text-n700 dark:text-n200 leading-relaxed mb-3">
+<div class="research-statement w-full my-4 px-4 py-3 rounded-xl border border-primary-dark/30 bg-n100/60 bg-n800/60 backdrop-blur-sm">
+  <p class="text-sm md:text-base text-n200 leading-relaxed mb-3">
     {researchP1.map((segment) => (segment.tone ? <span class={segment.tone}>{segment.text}</span> : segment.text))}
   </p>
-  <p class="text-sm md:text-base text-n700 dark:text-n200 leading-relaxed mb-3">
+  <p class="text-sm md:text-base text-n200 leading-relaxed mb-3">
     {researchP2.map((segment) => (segment.tone ? <span class={segment.tone}>{segment.text}</span> : segment.text))}
   </p>
-  <p class="text-sm md:text-base text-n700 dark:text-n200 leading-relaxed">
+  <p class="text-sm md:text-base text-n200 leading-relaxed">
     {researchP3.map((segment) => (segment.tone ? <span class={segment.tone}>{segment.text}</span> : segment.text))}
   </p>
 </div>

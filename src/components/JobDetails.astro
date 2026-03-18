@@ -27,7 +27,7 @@ const { title, company, location, startDate, endDate, description, goals, curren
 
   {/* Date + lab badges */}
   <div class="flex flex-wrap gap-2 items-center">
-    <Badge className="bg-primary-light dark:bg-primary-dark w-fit rounded-md whitespace-nowrap">
+    <Badge className="bg-primary-dark w-fit rounded-md whitespace-nowrap">
       {formatDatetime(startDate)} — {currentJob ? "Present" : endDate ? formatDatetime(endDate) : "N/A"}
     </Badge>
     {badges?.map((badge) => (
@@ -41,7 +41,7 @@ const { title, company, location, startDate, endDate, description, goals, curren
   <h3 class="text-xl font-bold">{title}</h3>
 
   {/* Company + Location in one line */}
-  <div class="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-medium text-teal-600 dark:text-teal-400">
+  <div class="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-medium text-teal-400">
     {website ? (
       <a href={website} target="_blank" rel="noopener noreferrer"
         class="hover:underline underline-offset-2">
@@ -50,7 +50,7 @@ const { title, company, location, startDate, endDate, description, goals, curren
     ) : (
       <span>{company}</span>
     )}
-    <span class="text-teal-400 dark:text-teal-600">·</span>
+    <span class="text-teal-600">·</span>
     <span class="flex items-center gap-1">
       <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 shrink-0" viewBox="0 0 24 24" fill="currentColor">
         <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
@@ -61,7 +61,7 @@ const { title, company, location, startDate, endDate, description, goals, curren
 
   {/* Lab */}
   {lab && (
-    <p class="text-sm text-yellow-500 dark:text-yellow-400">🔬 {lab}{supervisors?.length ? <span class="font-normal text-yellow-400 dark:text-yellow-300"> · {supervisors.join(", ")}</span> : ""}</p>
+    <p class="text-sm text-yellow-400">🔬 {lab}{supervisors?.length ? <span class="font-normal text-yellow-300"> · {supervisors.join(", ")}</span> : ""}</p>
   )}
 
   {/* Description */}
@@ -70,13 +70,13 @@ const { title, company, location, startDate, endDate, description, goals, curren
   {/* Responsibilities */}
   {goals?.length && (
     <details class="group text-sm">
-      <summary class="cursor-pointer list-none flex items-center gap-1 text-yellow-500 dark:text-yellow-400 font-medium w-fit">
+      <summary class="cursor-pointer list-none flex items-center gap-1 text-yellow-400 font-medium w-fit">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 transition-transform group-open:rotate-90 shrink-0" viewBox="0 0 24 24" fill="currentColor">
           <path d="M8 5v14l11-7z"/>
         </svg>
         Responsibilities
       </summary>
-      <ul class="mt-2 pl-5 flex flex-col gap-1 list-disc text-n700 dark:text-n200">
+      <ul class="mt-2 pl-5 flex flex-col gap-1 list-disc text-n200">
         {goals.map((goal: string) => <li>{goal}</li>)}
       </ul>
     </details>
