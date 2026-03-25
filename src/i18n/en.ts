@@ -38,7 +38,7 @@ const en: LocalizedDictionary = {
 				workflowsContainers: "Workflows & Containers",
 				projects: "Projects",
 				grantsFellowships: "Grants & Fellowships",
-				pciRecommended: "Recommended by PCI Genomics",
+				pciRecommended: "Recommended by Camille Marchet (PCI Genomics)",
 			},
 			research: {
 				p1: "I started with a [[wet:pipette]] and learned to [[dry:code]] to make sense of the data. I still remember how to [[wet:aspirate around a blood clot to save a pipette]], [[wet:give bacteria the heat shock of their lives to sneak in a plasmid]], or [[wet:dissect a fly larva's brain]] - but since then I've moved from [[dry:shell scripts]] to [[dry:reproducible containers and pipelines]], keeping the [[wet:wet-lab perspective]] that informs my [[dry:computational work]].",
@@ -101,10 +101,10 @@ const en: LocalizedDictionary = {
 			type: "paper",
 			title: "Benchmarking circRNA Detection Tools from Long-Read Sequencing",
 			year: 2025,
-			venue: "bioRxiv · PCI Genomics · Peer Community Journal",
+			venue: "Peer Community Journal · PCI Genomics",
 			summary:
 				"Circular RNAs (circRNAs) are unique non-coding RNAs with covalently closed loop structures formed through backsplicing events. This study is the first to independently benchmark available detection tools using long-read sequencing data using biologically driven simulation.",
-			url: "https://www.biorxiv.org/content/10.1101/2025.04.17.649290v3",
+			url: "https://peercommunityjournal.org/articles/10.24072/pcjournal.699/",
 			tags: ["circRNA", "Long-Read Sequencing", "Bioinformatics", "RNA Research", "Genomics"],
 			cover: "/images/benchmarking_circrna/pdf_overview.jpg",
 			pciUrl: "https://doi.org/10.24072/pci.genomics.100439",
@@ -137,9 +137,9 @@ const en: LocalizedDictionary = {
 			type: "workflow",
 			title: "circRNA Simulation Pipeline",
 			description:
-				"Nextflow pipeline for in silico simulation of circular RNAs to generate ground-truth datasets for benchmarking detection tools.",
-			url: "https://github.com/aerusakovich/",
-			tags: ["Nextflow", "Python", "circRNA", "Simulation"],
+				"Pipeline for in silico simulation of circular RNAs to generate ground-truth datasets for benchmarking detection tools.",
+			url: "https://github.com/aerusakovich/nano-circ",
+			tags: ["Nextflow", "shell", "R", "Python", "circRNA", "Simulation"],
 		},
 		{
 			type: "workflow",
@@ -154,7 +154,7 @@ const en: LocalizedDictionary = {
 			title: "Patched Tool Containers",
 			description:
 				"Docker/Singularity containers with patched versions of circRNA detection tools for reproducible benchmarking in HPC environments.",
-			url: "https://github.com/aerusakovich/",
+			url: "https://github.com/aerusakovich/containers_circRNA_tools",
 			tags: ["Docker", "Singularity", "HPC", "Reproducibility"],
 		},
 	],

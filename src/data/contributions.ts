@@ -46,7 +46,7 @@ export const publications: Publication[] = [
     type: "paper",
     title: "Benchmarking circRNA Detection Tools from Long-Read Sequencing",
     year: 2025,
-    venue: "bioRxiv · PCI Genomics · Peer Community Journal",
+    venue: "Peer Community Journal",
     summary: "Circular RNAs (circRNAs) are unique non-coding RNAs with covalently closed loop structures formed through backsplicing events. This study is the first to independently benchmark available detection tools using long-read sequencing data using biologically driven simulation.",
     url: "https://www.biorxiv.org/content/10.1101/2025.04.17.649290v3",
     tags: ["circRNA", "Long-Read Sequencing", "Bioinformatics", "RNA Research", "Genomics"],

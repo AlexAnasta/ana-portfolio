@@ -39,7 +39,7 @@ const fr: typeof en = {
 				workflowsContainers: "Workflows et conteneurs",
 				projects: "Projets",
 				grantsFellowships: "Bourses et financements",
-				pciRecommended: "Recommandé par PCI Genomics",
+				pciRecommended: "Recommandé par Camille Marchet (PCI Genomics)",
 			},
 			research: {
 				p1: "J'ai commencé avec une [[wet:pipette]], puis j'ai appris à [[dry:coder]] pour donner du sens aux données. Je me souviens encore de comment [[wet:aspirer autour d'un caillot pour sauver une pipette]], [[wet:faire un choc thermique à des bactéries pour introduire un plasmide]], ou [[wet:disséquer le cerveau d'une larve de drosophile]] - mais depuis, je suis passée des [[dry:scripts shell]] à des [[dry:conteneurs et pipelines reproductibles]], en gardant une [[wet:perspective wet-lab]] qui nourrit mon [[dry:travail computationnel]].",
@@ -100,10 +100,10 @@ const fr: typeof en = {
 			type: "paper",
 			title: "Benchmarking des Outils de Détection des circRNA à partir du Séquençage Long-Read",
 			year: 2025,
-			venue: "bioRxiv · PCI Genomics · Peer Community Journal",
+			venue: "Peer Community Journal · PCI Genomics",
 			summary:
 				"Les ARN circulaires (circRNA) sont des ARN non codants caractérisés par une structure en boucle fermée formée par des événements de backsplicing. Cette étude est la première à benchmarker de manière indépendante les outils disponibles à partir de données long-read et de simulations biologiquement guidées.",
-			url: "https://www.biorxiv.org/content/10.1101/2025.04.17.649290v3",
+			url: "https://peercommunityjournal.org/articles/10.24072/pcjournal.699/",
 			tags: ["circRNA", "Séquençage long-read", "Bioinformatique", "Recherche ARN", "Génomique"],
 			cover: "/images/benchmarking_circrna/pdf_overview.jpg",
 			pciUrl: "https://doi.org/10.24072/pci.genomics.100439",
@@ -136,9 +136,9 @@ const fr: typeof en = {
 			type: "workflow",
 			title: "Pipeline de Simulation de circRNA",
 			description:
-				"Pipeline Nextflow pour la simulation in silico des ARN circulaires afin de générer des jeux de données de référence pour le benchmarking.",
-			url: "https://github.com/aerusakovich/",
-			tags: ["Nextflow", "Python", "circRNA", "Simulation"],
+				"Pipeline pour la simulation in silico des ARN circulaires afin de générer des jeux de données de référence pour le benchmarking.",
+			url: "https://github.com/aerusakovich/nano-circ",
+			tags: ["Nextflow", "shell", "R", "Python", "circRNA", "Simulation"],
 		},
 		{
 			type: "workflow",
@@ -153,7 +153,7 @@ const fr: typeof en = {
 			title: "Conteneurs d'Outils Patchés",
 			description:
 				"Conteneurs Docker/Singularity avec versions patchées d'outils de détection de circRNA pour un benchmarking reproductible en environnement HPC.",
-			url: "https://github.com/aerusakovich/",
+			url: "https://github.com/aerusakovich/containers_circRNA_tools",
 			tags: ["Docker", "Singularity", "HPC", "Reproductibilité"],
 		},
 	],
