@@ -145,8 +145,8 @@ const en: LocalizedDictionary = {
 			type: "workflow",
 			title: "Long-Read circRNA Analysis Pipeline",
 			description:
-				"End-to-end Nextflow workflow for Oxford Nanopore long-read transcriptomics analysis, including isoform detection and differential expression.",
-			url: "https://github.com/aerusakovich/",
+				"Nextflow workflow for Oxford Nanopore long-read transcriptomics analysis, including isoform detection.",
+			url: "https://github.com/aerusakovich/nanocirc",
 			tags: ["Nextflow", "ONT", "Long-read", "Transcriptomics"],
 		},
 		{

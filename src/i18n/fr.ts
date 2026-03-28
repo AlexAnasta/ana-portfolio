@@ -144,8 +144,8 @@ const fr: typeof en = {
 			type: "workflow",
 			title: "Pipeline d'Analyse circRNA Long-Read",
 			description:
-				"Workflow Nextflow de bout en bout pour l'analyse transcriptomique long-read Oxford Nanopore, incluant détection d'isoformes et expression différentielle.",
-			url: "https://github.com/aerusakovich/",
+				"Workflow Nextflow pour l'analyse transcriptomique long-read Oxford Nanopore, incluant détection d'isoformes.",
+			url: "https://github.com/aerusakovich/nanocirc",
 			tags: ["Nextflow", "ONT", "Long-read", "Transcriptomique"],
 		},
 		{
