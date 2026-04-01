@@ -48,12 +48,14 @@ const researchP3 = parseToneText(t("home.research.p3"));
   <p class="text-sm md:text-base text-n200 leading-relaxed mb-3">
     {researchP1.map((segment) => (segment.tone ? <span class={segment.tone}>{segment.text}</span> : segment.text))}
   </p>
-  <p class="text-sm md:text-base text-n200 leading-relaxed mb-3">
+  <p class={`text-sm md:text-base text-n200 leading-relaxed${researchP3.some(s => s.text) ? " mb-3" : ""}`}>
     {researchP2.map((segment) => (segment.tone ? <span class={segment.tone}>{segment.text}</span> : segment.text))}
   </p>
-  <p class="text-sm md:text-base text-n200 leading-relaxed">
-    {researchP3.map((segment) => (segment.tone ? <span class={segment.tone}>{segment.text}</span> : segment.text))}
-  </p>
+  {researchP3.some((s) => s.text) && (
+    <p class="text-sm md:text-base text-n200 leading-relaxed">
+      {researchP3.map((segment) => (segment.tone ? <span class={segment.tone}>{segment.text}</span> : segment.text))}
+    </p>
+  )}
 </div>
 
 <style>

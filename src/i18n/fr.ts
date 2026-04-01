@@ -42,9 +42,9 @@ const fr: typeof en = {
 				pciRecommended: "Recommandé par Camille Marchet (PCI Genomics)",
 			},
 			research: {
-				p1: "J'ai commencé avec une [[wet:pipette]], puis j'ai appris à [[dry:coder]] pour donner du sens aux données. Je me souviens encore de comment [[wet:aspirer autour d'un caillot pour sauver une pipette]], [[wet:faire un choc thermique à des bactéries pour introduire un plasmide]], ou [[wet:disséquer le cerveau d'une larve de drosophile]] - mais depuis, je suis passée des [[dry:scripts shell]] à des [[dry:conteneurs et pipelines reproductibles]], en gardant une [[wet:perspective wet-lab]] qui nourrit mon [[dry:travail computationnel]].",
-				p2: "La question reste la même: comment la [[dry:variation de séquence]] façonne-t-elle le [[wet:phénotype]]? De la [[wet:prédisposition aux maladies]] et des [[wet:mutations induites par radiation]] aux [[dry:ARN circulaires dans la résistance au cancer]], je suis motivée par les problèmes où la [[dry:génomique]] et la [[dry:transcriptomique]] relient mécanismes et maladies réelles.",
-				p3: "Je cherche aujourd'hui un [[dry:postdoc computationnel]] en [[dry:génomique]] ou [[dry:transcriptomique]] qui valorise un vrai profil [[wet:wet]]-[[dry:dry]] et une [[wet:approche biologique solide]] de l'[[dry:analyse]].",
+				p1: "J'ai commencé avec une [[wet:pipette]], puis j'ai appris à [[dry:coder]] pour donner du sens aux données. Je me souviens encore de comment [[wet:aspirer autour d'un caillot]], [[wet:faire un choc thermique à des bactéries]] pour introduire un plasmide, ou [[wet:disséquer le cerveau d'une larve de drosophile]] - mais depuis, je suis passée à des [[dry:conteneurs et pipelines reproductibles]], en gardant la [[wet:perspective wet-lab]] qui ancre mon [[dry:travail computationnel]].",
+				p2: "La question reste la même : comment la [[dry:variation de séquence]] façonne-t-elle le [[wet:phénotype]]? Du [[wet:diagnostic SNP]] et de la [[wet:génétique des radiations]] aux [[dry:ARN circulaires dans la résistance au cancer]] - je suis motivée par les problèmes où la [[dry:génomique]] et la [[dry:transcriptomique]] relient mécanisme et maladie réelle, et je cherche un [[dry:postdoc computationnel]] qui valorise la [[dry:science ouverte]] et un vrai profil [[wet:wet]]-[[dry:dry]].",
+				p3: "",
 			},
 			professionTypewriter: {
 				prefix: "Chercheuse en",
