@@ -171,6 +171,80 @@ const en: LocalizedDictionary = {
 			url: "https://www.sfbi.fr",
 		},
 	],
+	communications: [
+		{
+			id: "talks",
+			title: "Conferences & Seminars",
+			cover: "/images/communications/oral_talks.jpeg",
+			subgroups: [
+				{
+					title: "Oral Talks",
+					items: [
+						{ title: "IGDR internal seminar", subtitle: "Research Presentation", lab: "Gene Expression and Oncogenesis Team", location: "Rennes", date: "16 April 2026", url: "https://igdr.univ-rennes.fr/en" },
+						{ title: "ED SVS Scientific Days", subtitle: "Research Presentation", lab: "Gene Expression and Oncogenesis Team", location: "Vannes", date: "14 April 2026", url: "https://js-ed-svs-637.sciencesconf.org/" },
+						{ title: "JOBIM 2025", subtitle: "Oral Presentation", lab: "Gene Expression and Oncogenesis Team", location: "Bordeaux", date: "8–11 July 2025", url: "https://jobim2025.labri.fr/", featured: true },
+						{ title: "IGDR internal seminar", subtitle: "Research Presentation", lab: "Gene Expression and Oncogenesis Team", location: "Rennes", date: "16 May 2025", url: "https://igdr.univ-rennes.fr/en" },
+						{ title: "IGDR internal seminar", subtitle: "Research Presentation", lab: "Gene Expression and Oncogenesis Team", location: "Rennes", date: "6 June 2024", url: "https://igdr.univ-rennes.fr/en" },
+						{ title: "Biology In Silico 2.0 Club", subtitle: "Research Presentation", lab: "Gene Expression and Oncogenesis Team", location: "Rennes", date: "8 February 2024", url: "https://igdr.univ-rennes.fr/en/silico-biology" },
+						{ title: "Genomic research at JINR facilities", subtitle: "Research Presentation", lab: "Laboratory of Nuclear Problems", location: "Dubna", date: "24 October 2023", url: "https://www.jinr.ru/posts/170513/" },
+					],
+				},
+				{
+					title: "Posters",
+					items: [
+						{ title: "SCAN day - Signalisation and CANcer", subtitle: "Poster Presentation", lab: "Gene Expression and Oncogenesis Team", location: "Rennes", date: "21 November 2024", url: "https://biosit.univ-rennes.fr/signalisation-et-cancer-scan" },
+						{ title: "Lifescience PhD Symposium", subtitle: "Poster Presentation", lab: "Gene Expression and Oncogenesis Team", location: "Rennes", date: "4–5 November 2024", url: "https://igdr-phd-symp24.sciencesconf.org/" },
+						{ title: "JOBIM 2024", subtitle: "Poster Presentation", lab: "Gene Expression and Oncogenesis Team", location: "Toulouse", date: "25–28 June 2024", url: "https://jobim2024.sciencesconf.org/" },
+						{ title: "CRCI2NA symposium", subtitle: "Poster Presentation", lab: "Gene Expression and Oncogenesis Team", location: "Nantes", date: "20–23 March 2024", url: "https://www.atoutcom.com/crci2na/" },
+					],
+				},
+			],
+		},
+		{
+			id: "organisation",
+			title: "Organisation & Animation",
+			cover: "/images/communications/open_doors.jpeg",
+			items: [
+				{ title: "Biology In Silico 2.0 Club", subtitle: "Publish or Perish – Session animation", lab: "Gene Expression and Oncogenesis Team", location: "Rennes", date: "16 April 2026", url: "https://igdr.univ-rennes.fr/en/silico-biology" },
+				{ title: "JBISR conference", subtitle: "Conference organisation and logo development", lab: "Gene Expression and Oncogenesis Team", location: "Rennes", date: "25 November 2025", logo: "/images/communications/jbisr.svg", url: "https://jbisr2025.sciencesconf.org/", featured: true },
+				{ title: "Biology In Silico 2.0 Club", subtitle: "Good practices, tips and tricks – Session organisation and animation", lab: "Gene Expression and Oncogenesis Team", location: "Rennes", date: "9 October 2025", url: "https://igdr.univ-rennes.fr/en/silico-biology" },
+				{ title: "IGDR's Open House for relatives", subtitle: "DNA extraction experiment supervision", lab: "Gene Expression and Oncogenesis Team", location: "Rennes", date: "5 July 2025", url: "https://igdr.univ-rennes.fr/en" },
+				{ title: "Biology In Silico 2.0 Club", subtitle: "Data visualisation – Session organisation and animation", lab: "Gene Expression and Oncogenesis Team", location: "Rennes", date: "9 January 2025", url: "https://igdr.univ-rennes.fr/en/silico-biology" },
+			],
+		},
+		{
+			id: "popular-science",
+			title: "Popular Science",
+			cover: "/images/communications/pop_science.jpeg",
+			items: [
+				{ title: "School lecture (6–8 grade)", subtitle: "Public lecture – From Genotype to Phenotype", lab: "Laboratory of Nuclear Problems", location: "Dubna", date: "16 May 2023", url: "" },
+				{ title: "Genealogical club of Dubna", subtitle: "Public lecture – Mass market genetics", lab: "Laboratory of Nuclear Problems", location: "Dubna", date: "8 November 2022", url: "https://www.jinr.ru/posts/vstrecha-genealogicheskogo-kluba-4/" },
+				{ title: "Women in science", subtitle: "Public discussion – Questions from school girls to female scientists", lab: "Laboratory of Nuclear Problems", location: "Dubna", date: "11 February 2022", url: "https://www.jinr.ru/posts/zhenshhiny-v-nauke-ot-litseistok-do-sostoyavshihsya-uchenyh/" },
+				{ title: "GEEK PICNIC 2021", subtitle: "Public lecture – About allergy, longevity and SNP", lab: "Laboratory of Nuclear Problems", location: "Moscow", date: "21 August 2021", url: "https://dlnp.jinr.ru/news/1584", featured: true },
+				{ title: "Blokhinka’s Lecture Hall", subtitle: "Public lecture – Genetic research: expectations and reality", lab: "Laboratory of Nuclear Problems", location: "Dubna", date: "14 April 2019", url: "https://www.jinr.ru/posts/geneticheskie-issledovaniya-ozhidaniya-i-realnost/" },
+				{ title: "State media", subtitle: "Science popularisation – channel 360, Moscow Komsomlets, etc.", lab: "Laboratory of Nuclear Problems", url: "https://dlnp.jinr.ru/in-the-media/1304" },
+			],
+		},
+		{
+			id: "students",
+			title: "Master Students Supervision",
+			cover: "/images/communications/student.jpeg",
+			items: [
+				{
+					title: "Master students supervision",
+					subtitle: "International student practice – supervision, experiment design and educational journal development",
+					lab: "Laboratory of Nuclear Problems",
+					location: "Dubna",
+					date: "2019–2021",
+					logo: "/images/communications/student_journal.png",
+					url: "https://www.jinr.ru/posts/studenty-iz-egipta-v-oiyai-uzhe-desyat-let/",
+					documentUrl: "https://drive.google.com/file/d/1aurRjwYSc5Muta_4Px-8LV16ey2kHvuk/view?usp=sharing",
+					documentLabel: "Student Practice Journal",
+					description: "Supervised students from Egypt, Romania, Czech Republic, and Bulgaria. Training program on molecular biology: DNA extraction, PCR, Sanger sequencing, and genotyping.",
+				},
+			],
+		},
+	],
 	education: [
 		{
 			title: "PhD (Bioinformatics & Cancer Research)",

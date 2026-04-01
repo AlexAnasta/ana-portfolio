@@ -159,6 +159,33 @@ export type SkillCategory = {
 	skills: SkillCategoryItem[];
 };
 
+export type CommunicationEvent = {
+	title: string;
+	subtitle?: string;
+	lab?: string;
+	location?: string;
+	date?: string;
+	description?: string;
+	url?: string;
+	logo?: string;
+	documentUrl?: string;
+	documentLabel?: string;
+	featured?: boolean;
+};
+
+export type CommunicationSubgroup = {
+	title: string;
+	items: CommunicationEvent[];
+};
+
+export type CommunicationCategory = {
+	id: string;
+	title: string;
+	cover?: string;
+	items?: CommunicationEvent[];
+	subgroups?: CommunicationSubgroup[];
+};
+
 export type LocalizedDictionary = {
 	messages: LocaleMessages;
 	config: {
@@ -168,6 +195,7 @@ export type LocalizedDictionary = {
 	publications: Publication[];
 	codeContributions: CodeContribution[];
 	grants: Grant[];
+	communications: CommunicationCategory[];
 	education: EducationItem[];
 	jobs: JobItem[];
 	languages: LanguageItem[];
