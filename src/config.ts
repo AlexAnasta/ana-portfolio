@@ -51,7 +51,7 @@ export const ME = {
 	contactInfo: {
 		email: "anastasia.rusakovich@univ-rennes.fr",
 		linkedin: "https://www.linkedin.com/in/anastasia-rusakovich/",
-		resumeDoc: "resume.pdf",
+		resumeDoc: "cv.html",
 	},
 	aboutMe: `I <span style="color:#62C4C3;font-weight:600;">started in the lab with a pipette</span>, and somewhere along the way learned to <span style="color:#FAE081;font-weight:600;">write the code</span> that makes sense of my data. Over the last few years I've been deep in <span style="color:#FAE081;font-weight:600;">bioinformatics</span> - moving from <span style="color:#FAE081;font-weight:600;"> shell scripts</span> to <span style="color:#FAE081;font-weight:600;">reproducible containers and pipelines</span>. But I still remember how to <span style="color:#62C4C3;font-weight:600;">aspirate around a blood clot</span> to save a pipette, <span style="color:#62C4C3;font-weight:600;">give bacteria the heat shock</span> of their lives to sneak in a plasmid, or <span style="color:#62C4C3;font-weight:600;">dissect a fly larva's brain</span> when the experiment calls for it.`,
 };

@@ -7,10 +7,11 @@ import LinkedIn from "./icons/LinkedIn.astro";
 // components imports
 import { Button } from "./ui/button";
 
-const resume = `/${ME.contactInfo.resumeDoc}`;
 const { linkedin, email } = ME.contactInfo;
 const locale = getLocaleFromUrl(Astro.url);
 const t = useTranslations(locale);
+const resumeByLocale: Partial<Record<typeof locale, string>> = { fr: "cv_fr.html" };
+const resume = `/${resumeByLocale[locale] ?? ME.contactInfo.resumeDoc}`;
 ---
 
 <div class="profile-action-buttons w-full flex gap-2">
@@ -52,10 +53,11 @@ const t = useTranslations(locale);
 </div>
 
 <script>
-	const cvBtn = document.getElementById("cvBtn") as HTMLButtonElement;
-	const resume = cvBtn.dataset.cv;
+	function setupCvBtn() {
+		const cvBtn = document.getElementById("cvBtn") as HTMLButtonElement;
+		if (!cvBtn) return;
+		cvBtn.onclick = () => window.open(cvBtn.dataset.cv, "_blank");
+	}
 
-	cvBtn.addEventListener("click", () => {
-		window.open(resume, "_blank");
-	});
+	document.addEventListener("astro:page-load", setupCvBtn);
 </script>

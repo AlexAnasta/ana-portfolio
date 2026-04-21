@@ -134,7 +134,7 @@ const fr: typeof en = {
 	codeContributions: [
 		{
 			type: "workflow",
-			title: "Pipeline de Simulation de circRNA",
+			title: "Pipeline de benchmarking circRNA",
 			description:
 				"Pipeline pour la simulation in silico des ARN circulaires afin de générer des jeux de données de référence pour le benchmarking.",
 			url: "https://github.com/aerusakovich/nano-circ",
@@ -142,10 +142,10 @@ const fr: typeof en = {
 		},
 		{
 			type: "workflow",
-			title: "Pipeline d'Analyse circRNA Long-Read",
+			title: "Pipeline d'analyse circRNA long-read (collaboration pour intégration à nf-core/circRNA en cours)",
 			description:
 				"Workflow Nextflow pour l'analyse transcriptomique long-read Oxford Nanopore, incluant détection d'isoformes.",
-			url: "https://github.com/aerusakovich/nanocirc",
+			url: "https://github.com/aerusakovich/nf_nanocirc_long_read",
 			tags: ["Nextflow", "ONT", "Long-read", "Transcriptomique"],
 		},
 		{
@@ -250,7 +250,7 @@ const fr: typeof en = {
 			startDate: "2023-11-01",
 			school: "Institut de Génétique et Développement de Rennes (IGDR)",
 			location: "Rennes, France",
-			description: "Séquençage long-read pour étudier le rôle des ARN circulaires dans la résistance thérapeutique du mélanome et identifier de nouveaux biomarqueurs.",
+			description: "Doctorat computationnel en transcriptomique du cancer, axé sur les circRNA et le séquençage long-read pour identifier de nouveaux biomarqueurs de résistance aux BRAFi dans le mélanome.",
 			thesis: "Séquençage long-read pour étudier le rôle des ARN circulaires dans la résistance thérapeutique du mélanome et identifier de nouveaux biomarqueurs.",
 			thesisLabel: "Thèse de doctorat",
 			lab: "Équipe Expression Génique et Oncogenèse",
@@ -266,7 +266,7 @@ const fr: typeof en = {
 			endDate: "2022-02-15",
 			school: "Académie d'État de Médecine Vétérinaire et Biotechnologie de Moscou",
 			location: "Moscou, Russie",
-			description: "Polymorphisme du gène FOXO3A et prédisposition génétique à la longévité humaine.",
+			description: "Master axé sur la biologie moléculaire et cellulaire, la radiobiologie, l'immunologie, la microbiologie, la virologie, la protéomique et les méthodes de recherche en génétique moléculaire.",
 			thesis: "Développement d'une méthode de détermination de la prédisposition génétique à la longévité humaine fondée sur l'analyse du polymorphisme FOXO3A.",
 			thesisLabel: "Projet de Master",
 			lab: "Laboratoire des Problèmes Nucléaires",
@@ -282,7 +282,7 @@ const fr: typeof en = {
 			endDate: "2019-06-26",
 			school: "Académie d'État de Médecine Vétérinaire et Biotechnologie de Moscou",
 			location: "Moscou, Russie",
-			description: "Polymorphismes FCER1A pour la prédiction du risque de maladies IgE-dépendantes.",
+			description: "Licence axée sur la génétique, la génomique, la biotechnologie, la biochimie, la physiologie animale, la génétique quantitative, la biostatistique et les approches moléculaires de l'hérédité et de la sélection.",
 			thesis: "Polymorphismes FCER1A (rs2251746 et rs2427837) pour la prédiction du risque de maladies IgE-dépendantes.",
 			thesisLabel: "Projet de Licence",
 			lab: "Laboratoire des Problèmes Nucléaires",
@@ -477,8 +477,8 @@ const fr: typeof en = {
 		},
 		{
 			name: "Français",
-			level: "B1",
-			description: "Je peux comprendre et m'exprimer dans les situations du quotidien, mais je ne suis pas encore totalement fluide.",
+			level: "B2 (compréhension)\nB1 (production)",
+			description: "Bonne compréhension (cours, réunions, séminaires); production de niveau B1 (écriture simple et communication en tête-à-tête); limité dans les échanges rapides.",
 			show: true,
 		},
 	],

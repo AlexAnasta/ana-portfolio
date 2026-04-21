@@ -135,7 +135,7 @@ const en: LocalizedDictionary = {
 	codeContributions: [
 		{
 			type: "workflow",
-			title: "circRNA Simulation Pipeline",
+			title: "circRNA benchmarking pipeline",
 			description:
 				"Pipeline for in silico simulation of circular RNAs to generate ground-truth datasets for benchmarking detection tools.",
 			url: "https://github.com/aerusakovich/nano-circ",
@@ -143,10 +143,10 @@ const en: LocalizedDictionary = {
 		},
 		{
 			type: "workflow",
-			title: "Long-Read circRNA Analysis Pipeline",
+			title: "Long-Read circRNA analysis pipeline (collaboration to merge with nf-core/circRNA underway)",
 			description:
 				"Nextflow workflow for Oxford Nanopore long-read transcriptomics analysis, including isoform detection.",
-			url: "https://github.com/aerusakovich/nanocirc",
+			url: "https://github.com/aerusakovich/nf_nanocirc_long_read",
 			tags: ["Nextflow", "ONT", "Long-read", "Transcriptomics"],
 		},
 		{
@@ -251,7 +251,7 @@ const en: LocalizedDictionary = {
 			startDate: "2023-11-01",
 			school: "Institute of Genetics and Development of Rennes (IGDR)",
 			location: "Rennes, France",
-			description: "Long-read sequencing to investigate circular RNA in melanoma treatment resistance and novel biomarker discovery.",
+			description: "Computational PhD in cancer transcriptomics, focused on circRNAs and long-read sequencing to identify novel biomarkers of BRAFi resistance in melanoma.",
 			thesis: "Long-read sequencing to investigate the role of circular RNA in melanoma treatment resistance and identify novel biomarkers.",
 			thesisLabel: "PhD Thesis",
 			lab: "Gene Expression and Oncogenesis Team",
@@ -267,7 +267,7 @@ const en: LocalizedDictionary = {
 			endDate: "2022-02-15",
 			school: "Moscow State Academy of Veterinary Medicine and Biotechnology",
 			location: "Moscow, Russia",
-			description: "FOXO3A gene polymorphism and genetic predisposition to human longevity.",
+			description: "MSc with a focus on molecular and cellular biology, radiobiology, immunology, microbiology, virology, proteomics, and molecular genetic research methods.",
 			thesis: "Development of a method to determine the presence of genetic predisposition to human longevity based on the analysis of FOXO3A gene polymorphism.",
 			thesisLabel: "MSc Project",
 			lab: "Laboratory of Nuclear Problems",
@@ -283,7 +283,7 @@ const en: LocalizedDictionary = {
 			endDate: "2019-06-26",
 			school: "Moscow State Academy of Veterinary Medicine and Biotechnology",
 			location: "Moscow, Russia",
-			description: "FCER1A polymorphisms for predicting risk of IgE-dependent diseases.",
+			description: "BSc with a focus on genetics, genomics, biotechnology, biochemistry, animal physiology, quantitative genetics, biostatistics, and molecular approaches to heredity and breeding.",
 			thesis: "FCER1A polymorphisms (rs2251746 and rs2427837) for predicting risk of IgE-dependent diseases.",
 			thesisLabel: "BSc Project",
 			lab: "Laboratory of Nuclear Problems",
@@ -402,7 +402,7 @@ const en: LocalizedDictionary = {
 				"Performed differential expression and isoform profiling in melanoma cell lines.",
 				"Identified circRNA candidates as potential biomarkers and therapeutic targets.",
 				"Performed data analysis on HPC clusters (SLURM, GenOuest).",
-				"Built reproducible workflows with Nextflow and Git-based version control (GitHub, GitLab).",
+				"Built reproducible workflows with Nextflow and Git-based version control (GitHub, GitLab) and initiated collaboration with nf-core community for pipeline integration.",
 				"Presented research at conferences and published findings in peer-reviewed journals.",
 			],
 			website: "https://igdr.univ-rennes.fr/en",
@@ -478,8 +478,8 @@ const en: LocalizedDictionary = {
 		},
 		{
 			name: "French",
-			level: "B1",
-			description: "I can understand others and express myself in everyday situations, but I am not yet fluent.",
+			level: "B2 (comprehension)\nB1 (production)",
+			description: "strong comprehension (lectures, meetings, seminars); B1-level production (simple writing and one-to-one communication); limited in fast-paced discussions.",
 			show: true,
 		},
 	],
