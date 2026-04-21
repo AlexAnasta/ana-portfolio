@@ -415,7 +415,7 @@ const en: LocalizedDictionary = {
 			endDate: "2023-10-27",
 			company: "Joint Institute for Nuclear Research (JINR)",
 			location: "Dubna, Russia",
-			description: "Combined wet-lab molecular biology with bioinformatics analysis in radiobiology and genetics projects",
+			description: "Combined wet-lab molecular biology with bioinformatics analysis in radiobiology and genetics projects.",
 			lab: "Laboratory of Nuclear Problems",
 			goals: [
 				"Prepared H. sapiens, D. melanogaster, and E. coli samples for molecular workflows.",
@@ -479,7 +479,7 @@ const en: LocalizedDictionary = {
 		{
 			name: "French",
 			level: "B2 (comprehension)\nB1 (production)",
-			description: "strong comprehension (lectures, meetings, seminars); B1-level production (simple writing and one-to-one communication); limited in fast-paced discussions.",
+			description: "Strong comprehension (lectures, meetings, seminars); B1-level production.",
 			show: true,
 		},
 	],

@@ -478,7 +478,7 @@ const fr: typeof en = {
 		{
 			name: "Français",
 			level: "B2 (compréhension)\nB1 (production)",
-			description: "Bonne compréhension (cours, réunions, séminaires); production de niveau B1 (écriture simple et communication en tête-à-tête); limité dans les échanges rapides.",
+			description: "Bonne compréhension (cours, réunions, séminaires); production de niveau B1.",
 			show: true,
 		},
 	],
