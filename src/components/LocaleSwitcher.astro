@@ -41,7 +41,7 @@ const buildHref = (targetLocale: Locale) => {
                 class:list={{
                   "px-2 py-1 rounded-md transition-colors": true,
                   "bg-primary-dark text-n900": locale === item,
-                  "text-n200 hover:text-n900": locale !== item,
+                  "text-n200 hover:text-primary-dark": locale !== item,
                 }}
               >
 					{t(key)}

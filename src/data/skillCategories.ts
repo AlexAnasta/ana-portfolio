@@ -6,6 +6,7 @@ export interface Skill {
   description: string;
   icon: string;
   badges?: Badge[];
+  level?: 1 | 2 | 3;
 }
 
 export interface SkillCategory {

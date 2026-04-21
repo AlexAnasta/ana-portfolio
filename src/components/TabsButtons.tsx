@@ -39,6 +39,9 @@ const getTabContent = (
 const TabsButtons = ({ tabs, tabContents, ...slotProps }: TabsButtonsProps) => {
 	const slotContents = slotProps as Readonly<Record<string, ReactNode>>;
 	const [activeTab, setActiveTab] = useState<string>(tabs[0]?.value ?? "");
+	const [mountedTabs, setMountedTabs] = useState<Set<string>>(
+		() => new Set([tabs[0]?.value ?? ""]),
+	);
 
 	useEffect(() => {
 		if (!tabs.length) {
@@ -70,6 +73,10 @@ const TabsButtons = ({ tabs, tabContents, ...slotProps }: TabsButtonsProps) => {
 		}
 
 		localSession.set(TAB_SESSION_KEY, activeTab);
+		setMountedTabs((prev) => {
+			if (prev.has(activeTab)) return prev;
+			return new Set([...prev, activeTab]);
+		});
 	}, [activeTab, tabs]);
 
 	if (!tabs.length) {
@@ -103,7 +110,9 @@ const TabsButtons = ({ tabs, tabContents, ...slotProps }: TabsButtonsProps) => {
 			</TabsList>
 			{tabs.map((tab) => (
 				<TabsContent key={tab.value} value={tab.value}>
-					{getTabContent(tab, slotContents, tabContents)}
+					{mountedTabs.has(tab.value)
+						? getTabContent(tab, slotContents, tabContents)
+						: null}
 				</TabsContent>
 			))}
 		</Tabs>

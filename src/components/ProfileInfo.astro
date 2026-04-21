@@ -21,7 +21,7 @@ const { name } = getMeConfig(locale);
       <h1 class="text-xl md:text-2xl lg:text-4xl xl:text-4xl text-white">
         {name}
       </h1>
-      <ProfessionTypewriter client:load locale={locale} />
+      <ProfessionTypewriter client:idle locale={locale} />
       </div>
       <Social />
     </div>

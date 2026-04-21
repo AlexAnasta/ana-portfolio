@@ -12,6 +12,13 @@ interface Props {
 const { locale } = Astro.props;
 const t = useTranslations(locale);
 const { skillCategories, languages } = getLocalizedContent(locale);
+
+const LEVEL_LABELS: Record<string, Record<number, string>> = {
+  fr: { 1: "basique", 2: "compétent", 3: "avancé" },
+  en: { 1: "basic", 2: "proficient", 3: "advanced" },
+  ru: { 1: "basic", 2: "proficient", 3: "advanced" },
+};
+const levelLabels = LEVEL_LABELS[locale] ?? LEVEL_LABELS.en;
 ---
 
 <div class="relative flex flex-col gap-8 text-n200 w-full mt-10 px-4">
@@ -25,6 +32,8 @@ const { skillCategories, languages } = getLocalizedContent(locale);
             description={skill.description}
             iconKey={skill.icon}
             badges={skill.badges}
+            level={skill.level}
+            levelLabel={skill.level !== undefined ? levelLabels[skill.level] : undefined}
           />
         ))}
       </div>
