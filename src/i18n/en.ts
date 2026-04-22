@@ -42,7 +42,7 @@ const en: LocalizedDictionary = {
 			},
 			research: {
 				p1: "I started with a [[wet:pipette]] and learned to [[dry:code]] to make sense of the data. I still remember how to [[wet:aspirate around a blood clot]], [[wet:heat-shock bacteria]] to sneak in a plasmid, or [[wet:dissect a fly larva's brain]] - but I've since moved to [[dry:reproducible containers and pipelines]], keeping the [[wet:wet-lab perspective]] that grounds my [[dry:computational work]].",
-				p2: "The question has never changed: how does [[dry:sequence variation]] shape [[wet:phenotype]]? From [[wet:SNP diagnostics]] and [[wet:radiation genetics]] to [[dry:circular RNAs in cancer resistance]] - I'm motivated by problems where [[dry:genomics]] and [[dry:transcriptomics]] link mechanism to real disease, and I'm looking for a [[dry:computational postdoc]] that values [[dry:open science]] and a true [[wet:wet]]-[[dry:dry]] profile.",
+				p2: "The question has never changed: how do [[dry:sequence variations]] shape [[wet:phenotypes]]? From [[wet:SNP diagnostics]] and [[wet:radiation genetics]] to [[dry:circular RNAs in cancer resistance]] - I'm motivated by problems where [[dry:genomics]] and [[dry:transcriptomics]] link mechanism to real disease, and I'm looking for a postdoc in [[dry:computational biology]] that values [[dry:open science]] and is interested in a [[wet:wet]]-[[dry:dry]] profile.",
 				p3: "",
 			},
 			professionTypewriter: {
