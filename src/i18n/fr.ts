@@ -550,7 +550,7 @@ const fr: typeof en = {
 				{ name: "Programmation et scripts", description: "Développement de pipelines, scripts d'analyse de données et visualisations en Python, R et Bash.", icon: "coding", badges: ["dry lab"], level: 3 },
 				{ name: "Workflow et infrastructure", description: "Construction et déploiement de pipelines Nextflow reproductibles sur clusters HPC/SLURM avec Docker et Singularity.", icon: "workflow", badges: ["dry lab"], level: 3 },
 				{ name: "Benchmark et simulation", description: "Conception d'un simulateur de circRNA biologiquement guidé et premier benchmark indépendant dans le domaine des circRNA long-read.", icon: "benchmarking", badges: ["dry lab"], level: 3 },
-				{ name: "Analyse NGS", description: "Traitement de données Illumina short-read du contrôle qualité et trimming jusqu'à l'alignement et l'appel de variants.", icon: "ngs", badges: ["dry lab"], level: 2 },
+				{ name: "Analyse NGS", description: "WGS pour le génotypage et les mutations induites par les radiations. Traitement de données Illumina short-read du contrôle qualité et trimming jusqu'à l'alignement et l'appel de variants.", icon: "ngs", badges: ["dry lab"], level: 2 },
 				{ name: "Statistiques", description: "Planification d'expériences avec calculs de taille d'échantillon; application de méthodes statistiques: analyse d'expression différentielle, courbes de survie, corrélation et méthodes de rééchantillonnage.", icon: "statistics", badges: ["dry lab"], level: 2 },
 			],
 		},

@@ -551,7 +551,7 @@ const en: LocalizedDictionary = {
 				{ name: "Coding & Scripting", description: "Wrote pipelines, data analysis scripts and performed visualisations in Python, R and Bash.", icon: "coding", badges: ["dry lab"], level: 3 },
 				{ name: "Workflow & Infrastructure", description: "Built and deployed reproducible Nextflow pipelines on HPC/SLURM clusters using Docker and Singularity.", icon: "workflow", badges: ["dry lab"], level: 3 },
 				{ name: "Benchmarking & Simulation", description: "Designed biologically-guided circRNAsimulator and conducted the first independent benchmark in the long-read circRNA field.", icon: "benchmarking", badges: ["dry lab"], level: 3 },
-				{ name: "NGS Analysis", description: "Processed Illumina short-read data from QC and trimming through alignment and variant calling.", icon: "ngs", badges: ["dry lab"], level: 2 },
+				{ name: "NGS Analysis", description: "WGS for genotyping and radiation-induced mutations. Processed Illumina short-read data from QC and trimming through alignment and variant calling.", icon: "ngs", badges: ["dry lab"], level: 2 },
 				{ name: "Statistics", description: "Planned experiments with sample  calculations; applied different statistical methods:  DE analysis, survival curves, correlation and resampling tests as needed.", icon: "statistics", badges: ["dry lab"], level: 2 },
 			],
 		},
